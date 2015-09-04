@@ -6,15 +6,17 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class BibliotecaAppTest {
+import static org.junit.Assert.*;
+
+public class BooksTest {
 
     @Test
-    public void shouldPrintTheWelcomeMessage() {
-        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+    public void shouldPrintTheAllBooks() {
+        Books books = new Books();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(byteArrayOutputStream));
-        bibliotecaApp.printWelcomeMessage();
+        books.printBooksList();
 
-        Assert.assertEquals("Welcome to Biblioteca\ns", byteArrayOutputStream.toString());
+        assertEquals("Head First Java\nPragmatic Programming\nMartin's Refactoring\n",byteArrayOutputStream.toString());
     }
 }
