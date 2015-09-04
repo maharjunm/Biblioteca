@@ -27,4 +27,14 @@ public class BibliotecaAppTest {
 
         Assert.assertEquals("Welcome to Biblioteca\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(byteArrayOutputStream));
+        bibliotecaApp.start();
+
+        Assert.assertEquals("Welcome to Biblioteca\nHead First Java\nPragmatic Programming\nMartin's Refactoring\n", byteArrayOutputStream.toString());
+    }
 }

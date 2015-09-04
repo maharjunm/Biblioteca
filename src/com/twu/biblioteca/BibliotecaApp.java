@@ -9,6 +9,8 @@ public class BibliotecaApp {
 
     public void start() {
         printWelcomeMessage();
+        Books books = new Books();
+        books.printBooksList();
     }
 
     public void printWelcomeMessage() {
