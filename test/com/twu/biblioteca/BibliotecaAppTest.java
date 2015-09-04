@@ -15,6 +15,16 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(byteArrayOutputStream));
         bibliotecaApp.printWelcomeMessage();
 
-        Assert.assertEquals("Welcome to Biblioteca\ns", byteArrayOutputStream.toString());
+        Assert.assertEquals("Welcome to Biblioteca\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldPrintTheWelcomeMessageWhenWeStartTheApplication() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(byteArrayOutputStream));
+        bibliotecaApp.start();
+
+        Assert.assertEquals("Welcome to Biblioteca\n", byteArrayOutputStream.toString());
     }
 }
