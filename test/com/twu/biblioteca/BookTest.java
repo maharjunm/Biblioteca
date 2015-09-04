@@ -8,9 +8,16 @@ public class BookTest {
 
     @Test
     public void shouldReturnTheBookName() {
-        Book book = new Book("Head First Java");
+        Book book = new Book("Head First Java", "Kathy Sierra");
 
-        assertEquals("Head First Java", book.toString());
+        assertEquals("Head First Java\tKathy Sierra", book.toString());
+    }
+
+    @Test
+    public void shouldReturnTheBookNameAndAuthorName() {
+        Book book = new Book("Head First Java","Kathy Sierra");
+
+        assertEquals("Head First Java\tKathy Sierra", book.toString());
     }
 
 }
