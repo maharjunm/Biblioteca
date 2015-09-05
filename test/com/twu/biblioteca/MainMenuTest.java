@@ -12,7 +12,7 @@ public class MainMenuTest {
     @Test
     public void shouldPrintTheMenuOptions() {
         MainMenu mainMenu = new MainMenu();
-        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream();
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("1");
         mainMenu.printOptions();
 
         Assert.assertEquals("1.List Books\nChoose one Option :Book Name\tAuthour Name\tYear Published\n" +
@@ -22,7 +22,7 @@ public class MainMenuTest {
     @Test
     public void shouldPrintTheOptionAndChooseOptionAlso() {
         MainMenu mainMenu = new MainMenu();
-        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream();
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("1");
 
         mainMenu.printOptions();
 
@@ -33,7 +33,7 @@ public class MainMenuTest {
     @Test
     public void shouldPrintTheOptionAndChooseOptionIfHeChoose1ThenPrintTheListOfBooks() {
         MainMenu mainMenu = new MainMenu();
-        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream();
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("1");
 
         mainMenu.printOptions();
 
@@ -41,11 +41,22 @@ public class MainMenuTest {
                 "Head First Java\tKathy Sierra\t2009\n", byteArrayOutputStream.toString());
     }
 
-    private ByteArrayOutputStream getByteArrayInputAndOutputStream() {
+
+    @Test
+    public void shouldPrintTheOptionAndChooseOptionIfHeChoose2ThenPrintSelectValidOption() {
+        MainMenu mainMenu = new MainMenu();
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("2");
+
+        mainMenu.printOptions();
+
+        Assert.assertEquals("1.List Books\nChoose one Option :Select a Valid Option!\n", byteArrayOutputStream.toString());
+    }
+
+    private ByteArrayOutputStream getByteArrayInputAndOutputStream(String input) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(byteArrayOutputStream));
 
-        String input = "1";
+
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         return byteArrayOutputStream;
