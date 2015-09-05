@@ -41,7 +41,6 @@ public class MainMenuTest {
                 "Head First Java\tKathy Sierra\t2009\n", byteArrayOutputStream.toString());
     }
 
-
     @Test
     public void shouldPrintTheOptionAndChooseOptionIfHeChoose2ThenPrintSelectValidOption() {
         MainMenu mainMenu = new MainMenu();
@@ -50,6 +49,16 @@ public class MainMenuTest {
         mainMenu.printOptions();
 
         Assert.assertEquals("1.List Books\nChoose one Option :Select a Valid Option!\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldCloseTheApplicationAfterChoosingQuitOption() {
+        MainMenu mainMenu = new MainMenu();
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("2");
+
+        mainMenu.printOptions();
+
+        Assert.assertEquals("1.List Books\n2.Quit\nChoose one Option :\n", byteArrayOutputStream.toString());
     }
 
     private ByteArrayOutputStream getByteArrayInputAndOutputStream(String input) {

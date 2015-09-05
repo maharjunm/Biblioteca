@@ -7,19 +7,23 @@ import java.util.Scanner;
 public class MainMenu {
     public void printOptions() {
         System.out.println("1.List Books");
+        System.out.println("2.Quit");
         System.out.print("Choose one Option :");
         Scanner scanner = new Scanner(System.in);
-        String option=scanner.nextLine();
+        String option = scanner.nextLine();
 
         processUserOption(option);
     }
 
     private void processUserOption(String option) {
-        if(option.equals("1")){
+        if (option.equals("1")) {
             List<Book> list = new ArrayList<>();
             list.add(new Book("Head First Java", "Kathy Sierra", 2009));
             Books books = new Books(list);
             books.printBooks();
+        }
+        if (option.equals("2")) {
+            System.exit(0);
         }
         System.out.println("Select a Valid Option!");
     }
