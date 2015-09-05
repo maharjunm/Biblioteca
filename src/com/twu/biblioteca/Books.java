@@ -10,7 +10,9 @@ public class Books {
         this.list = list;
     }
 
-    public void printBooksList() {
+    public void printBooks() {
+        String header = "Book Name\tAuthour Name\tYear Published";
+        System.out.println(header);
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }

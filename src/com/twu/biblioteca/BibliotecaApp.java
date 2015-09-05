@@ -15,7 +15,7 @@ public class BibliotecaApp {
         List<Book> list = new ArrayList<>();
         list.add(new Book("Head First Java", "Kathy Sierra", 2009));
         Books books = new Books(list);
-        books.printBooksList();
+        books.printBooks();
     }
 
     public void printWelcomeMessage() {
