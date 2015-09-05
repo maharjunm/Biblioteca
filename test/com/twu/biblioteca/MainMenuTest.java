@@ -15,6 +15,16 @@ public class MainMenuTest {
         System.setOut(new PrintStream(byteArrayOutputStream));
         mainMenu.printOptions();
 
-        Assert.assertEquals("1.List Books\n",byteArrayOutputStream.toString());
+        Assert.assertEquals("1.List Books\nChoose one Option :",byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldPrintTheOptionAndChooseOptionAlso() {
+        MainMenu mainMenu = new MainMenu();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(byteArrayOutputStream));
+        mainMenu.printOptions();
+
+        Assert.assertEquals("1.List Books\nChoose one Option :",byteArrayOutputStream.toString());
     }
 }
