@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BibliotecaApp {
 
     public static void main(String[] args) {
@@ -9,7 +12,9 @@ public class BibliotecaApp {
 
     public void start() {
         printWelcomeMessage();
-        Books books = new Books();
+        List<Book> list = new ArrayList<>();
+        list.add(new Book("Head First Java", "Kathy Sierra", 2009));
+        Books books = new Books(list);
         books.printBooksList();
     }
 

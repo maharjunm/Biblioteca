@@ -1,11 +1,18 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Books {
-    private String[] list = {"Head First Java","Pragmatic Programming","Martin's Refactoring"};
+    private List<Book> list;
+
+    public Books(List<Book> list) {
+        this.list = list;
+    }
 
     public void printBooksList() {
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i]);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
     }
 }
