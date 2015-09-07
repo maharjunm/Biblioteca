@@ -10,6 +10,6 @@ public class MenuTest {
     public void shouldShowTheListBooksOption() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n", menu.toString());
+        assertEquals("1.List Books", menu.toString());
     }
 }

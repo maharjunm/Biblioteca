@@ -11,6 +11,6 @@ public class Menu {
         for (int i = 0; i < options.length; i++) {
             output += (i + 1) + "." + options[i] + "\n";
         }
-        return output;
+        return output.substring(0,output.length()-1);
     }
 }
