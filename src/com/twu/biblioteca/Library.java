@@ -1,21 +1,22 @@
 //Library has list of books
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-    private List<Book> books;
+    private ArrayList books = new ArrayList<Book>() {{
+        add(new Book("Head First Java", "Bert Bates", 2009));
+    }};
 
-    public Library(List<Book> books) {
-        this.books = books;
-    }
-
-    public void printBooksList() {
+    @Override
+    public String toString() {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "____________________________________________________________________";
-        System.out.println(line + "\n" + header + "\n" + line);
+        String output = line + "\n" + header + "\n" + line + "\n";
         for (int i = 0; i < books.size(); i++) {
-            System.out.println(books.get(i));
+            output += books.get(i) + "\n";
         }
+        return output;
     }
 }

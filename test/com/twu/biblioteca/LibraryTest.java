@@ -15,15 +15,10 @@ public class LibraryTest {
 
     @Test
     public void shouldPrintThePreExistingListOfBooks() {
-        List<Book> books = new ArrayList<>();
-        books.add(new Book("Head First Java", "Bert Bates", 2009));
-        Library library = new Library(books);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        library.printBooksList();
+        Library library = new Library();
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "____________________________________________________________________";
 
-        assertEquals(line + "\n" + header + "\n" + line + "\n" + format + "\n", outContent.toString());
+        assertEquals(line + "\n" + header + "\n" + line + "\n" + format + "\n",library.toString());
     }
 }

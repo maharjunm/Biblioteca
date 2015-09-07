@@ -1,16 +1,16 @@
 package com.twu.biblioteca;
 
+import java.util.Scanner;
+
 public class Menu {
     private String[] options = {"List Books"};
 
-    public void showOptions() {
+    @Override
+    public String toString() {
+        String output = "";
         for (int i = 0; i < options.length; i++) {
-            System.out.println((i + 1) + "." + options[i]);
+            output += (i + 1) + "." + options[i]+"\n";
         }
-        chooseOption();
-    }
-
-    private void chooseOption() {
-        System.out.print("Choose Any One Option :");
+        return output;
     }
 }
