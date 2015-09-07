@@ -43,7 +43,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldPrintTheListWhenWeChoose() {
+    public void shouldPrintTheListWhenWeChoose1() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "1";
@@ -56,5 +56,18 @@ public class BibliotecaAppTest {
         String line = "____________________________________________________________________";
 
         assertEquals("Welcome To Biblioteca\n1.List Books\nChoose Any One Option :\n"+line + "\n" + header + "\n" + line + "\n" + format + "\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldPrintTheInvalidOptionWhenWeChoose2() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "2";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        System.setOut(new PrintStream(outContent));
+        bibliotecaApp.start();
+
+        assertEquals("Welcome To Biblioteca\n1.List Books\nChoose Any One Option :\nSelect a valid option!\n", outContent.toString());
     }
 }

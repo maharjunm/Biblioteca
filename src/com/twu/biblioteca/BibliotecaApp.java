@@ -19,6 +19,8 @@ public class BibliotecaApp {
         if(input.equals("1")){
             Library library = new Library();
             new Display(library.toString()).print();
+        }else{
+            new Display("Select a valid option!").print();
         }
     }
 }
