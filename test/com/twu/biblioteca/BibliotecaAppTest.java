@@ -30,4 +30,14 @@ public class BibliotecaAppTest {
 
         assertEquals("Welcome To Biblioteca\n1.List Books\n", outContent.toString());
     }
+
+    @Test
+    public void shouldPrintTheOptionsAndChooseOprion() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        bibliotecaApp.start();
+
+        assertEquals("Welcome To Biblioteca\n1.List Books\nChoose Any One Option :\n", outContent.toString());
+    }
 }
