@@ -17,6 +17,6 @@ public class Library {
         for (int i = 0; i < books.size(); i++) {
             output += books.get(i) + "\n";
         }
-        return output;
+        return output.substring(0,output.length()-1);
     }
 }
