@@ -12,8 +12,8 @@ public class Library {
 
     public void printBooksList() {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
-        String line = "_____________________________________________";
-        System.out.println(line + "\n" + header + line);
+        String line = "____________________________________________________________________";
+        System.out.println(line + "\n" + header + "\n" + line);
         for (int i = 0; i < books.size(); i++) {
             System.out.println(books.get(i));
         }
