@@ -21,10 +21,11 @@ public class MainMenu {
             list.add(new Book("Head First Java", "Kathy Sierra", 2009));
             Books books = new Books(list);
             books.printBooks();
-        }
-        if (option.equals("2")) {
+        } else if (option.equals("2")) {
             System.exit(0);
+        } else {
+            System.out.println("Select a Valid Option!");
+            printOptions();
         }
-        System.out.println("Select a Valid Option!");
     }
 }

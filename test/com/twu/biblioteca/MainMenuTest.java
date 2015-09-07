@@ -7,6 +7,8 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.mockito.Mockito.mock;
+
 public class MainMenuTest {
 
     @Test
@@ -15,7 +17,7 @@ public class MainMenuTest {
         ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("1");
         mainMenu.printOptions();
 
-        Assert.assertEquals("1.List Books\nChoose one Option :Book Name\tAuthour Name\tYear Published\n" +
+        Assert.assertEquals("1.List Books\n2.Quit\nChoose one Option :Book Name\tAuthour Name\tYear Published\n" +
                 "Head First Java\tKathy Sierra\t2009\n", byteArrayOutputStream.toString());
     }
 
@@ -37,7 +39,7 @@ public class MainMenuTest {
 
         mainMenu.printOptions();
 
-        Assert.assertEquals("1.List Books\nChoose one Option :Book Name\tAuthour Name\tYear Published\n" +
+        Assert.assertEquals("1.List Books\n2.Quit\nChoose one Option :Book Name\tAuthour Name\tYear Published\n" +
                 "Head First Java\tKathy Sierra\t2009\n", byteArrayOutputStream.toString());
     }
 
@@ -59,6 +61,13 @@ public class MainMenuTest {
         mainMenu.printOptions();
 
         Assert.assertEquals("1.List Books\n2.Quit\nChoose one Option :\n", byteArrayOutputStream.toString());
+    }
+
+    public void shouldShowTheOptionsAfterhoosingInvalidOption() {
+        MainMenu mainMenu = mock(MainMenu.class);
+        ByteArrayOutputStream byteArrayOutputStream = getByteArrayInputAndOutputStream("2");
+
+        mainMenu.printOptions();
     }
 
     private ByteArrayOutputStream getByteArrayInputAndOutputStream(String input) {
