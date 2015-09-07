@@ -7,8 +7,15 @@ public class BookTest {
 
     @Test
     public void shouldHaveNameForEachBookAndPrintIt() {
-        Book book = new Book("Head First Java");
+        Book book = new Book("Head First Java", "Bert Bates");
 
-        Assert.assertEquals("Head First Java",book.toString());
+        Assert.assertEquals("Head First Java\tBert Bates",book.toString());
+    }
+
+    @Test
+    public void shouldHaveNameAndAuthorForEachBookAndPrintThem() {
+        Book book = new Book("Head First Java","Bert Bates");
+
+        Assert.assertEquals("Head First Java\tBert Bates",book.toString());
     }
 }
