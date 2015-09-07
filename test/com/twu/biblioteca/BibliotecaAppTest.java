@@ -17,6 +17,6 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(outContent));
         bibliotecaApp.start();
 
-        assertEquals("Welcome To Biblioteca\n",outContent.toString());
+        assertEquals("Welcome To Biblioteca\n", outContent.toString());
     }
 }
