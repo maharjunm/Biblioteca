@@ -3,14 +3,16 @@ package com.twu.biblioteca;
 public class Book {
     private final String name;
     private final String author;
+    private final int yearPublished;
 
-    public Book(String name, String author) {
+    public Book(String name, String author, int yearPublished) {
         this.name = name;
         this.author = author;
+        this.yearPublished = yearPublished;
     }
 
     @Override
     public String toString() {
-        return name + "\t" + author;
+        return name + "\t" + author + "\t" + yearPublished;
     }
 }
