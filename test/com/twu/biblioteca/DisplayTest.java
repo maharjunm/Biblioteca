@@ -1,10 +1,11 @@
 package com.twu.biblioteca;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
 
 public class DisplayTest {
 
@@ -14,6 +15,6 @@ public class DisplayTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         display.print();
-        Assert.assertEquals("Maharjun\n",outContent.toString());
+        assertEquals("Maharjun\n", outContent.toString());
     }
 }

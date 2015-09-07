@@ -2,11 +2,6 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.Assert.*;
 
 public class LibraryTest {
@@ -19,6 +14,6 @@ public class LibraryTest {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "____________________________________________________________________";
 
-        assertEquals(line + "\n" + header + "\n" + line + "\n" + format + "\n",library.toString());
+        assertEquals(line + "\n" + header + "\n" + line + "\n" + format + "\n", library.toString());
     }
 }

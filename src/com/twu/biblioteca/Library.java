@@ -2,9 +2,9 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Library {
+
     private ArrayList books = new ArrayList<Book>() {{
         add(new Book("Head First Java", "Bert Bates", 2009));
     }};

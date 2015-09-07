@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 public class Display {
+
     private final String output;
 
     public Display(String output) {
