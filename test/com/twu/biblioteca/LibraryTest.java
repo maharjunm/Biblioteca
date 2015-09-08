@@ -43,7 +43,7 @@ public class LibraryTest {
     public void shouldPrintTheThankYouMessageWhenWeWantToReturnValidBook() {
         Library library = new Library();
         library.checkedOut("Head First Java");
-        
+
         Assert.assertEquals("Thank you for returning the book.", library.returnBook("Head First Java"));
     }
 }
