@@ -8,6 +8,7 @@ public class Library {
     private ArrayList books = new ArrayList<Book>() {{
         add(new Book("Head First Java", "Bert Bates", 2009));
     }};
+    private ArrayList checkedOutBooks = new ArrayList<Book>();
 
     @Override
     public String toString() {
@@ -28,5 +29,16 @@ public class Library {
             }
         }
         return false;
+    }
+
+    public void checkedOut(String thatBook) {
+        for (int i = 0; i < books.size(); i++) {
+            Book thisBook = (Book) books.get(i);
+            if(thisBook.getName().equals(thatBook)){
+                checkedOutBooks.add(books.get(i));
+                books.remove(i);
+
+            }
+        }
     }
 }

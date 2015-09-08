@@ -1,14 +1,16 @@
 package com.twu.biblioteca;
 
+import java.io.PrintStream;
+
 public class Display {
 
-    private final String output;
+    private PrintStream printStream;
 
-    public Display(String output) {
-        this.output = output;
+    public Display(PrintStream printStream) {
+        this.printStream = printStream;
     }
 
-    public void print() {
+    public void print(String output) {
         System.out.println(output);
     }
 }

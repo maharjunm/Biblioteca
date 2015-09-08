@@ -10,19 +10,5 @@ public class BibliotecaApp {
     }
 
     public void start() {
-        new Display("Welcome To Biblioteca").print();
-        while (true) {
-            Menu menu = new Menu();
-            new Display(menu.toString()).print();
-            new Display("Choose Any One Option :").print();
-            UserInput userInput = new UserInput();
-            String input = userInput.getInput();
-            if (input.equals("1")) {
-                Library library = new Library();
-                new Display(library.toString()).print();
-            } else {
-                new Display("Select a valid option!").print();
-            }
-        }
     }
 }

@@ -1,11 +1,13 @@
 package com.twu.biblioteca;
 
 public class CheckoutBook {
+    private  Display display;
     private Library library;
     private String input;
 
-    public CheckoutBook(Library library) {
+    public CheckoutBook(Library library,Display display) {
         this.library = library;
+        this.display = display;
     }
 
     public String getInput() {
@@ -14,10 +16,9 @@ public class CheckoutBook {
         return input;
     }
 
-    public boolean isPresent() {
-        if(library.findByBookName(input)) {
-            return true;
+    public void checkedOut(String thatBook) {
+        if(library.findByBookName(thatBook)){
+            library.checkedOut(thatBook);
         }
-        return false;
     }
 }
