@@ -14,8 +14,7 @@ public class UserInputTest {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-
-        Assert.assertEquals("1",userInput.getInput());
+        Assert.assertEquals("1", userInput.getInput());
     }
 
 }

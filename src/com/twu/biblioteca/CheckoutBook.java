@@ -11,9 +11,7 @@ public class CheckoutBook {
     }
 
     public String getInput() {
-        UserInput userInput = new UserInput();
-        this.input = userInput.getInput();
-        return input;
+        return "";
     }
 
     public void checkedOut(String thatBook) {
