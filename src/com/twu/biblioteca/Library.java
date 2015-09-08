@@ -40,6 +40,6 @@ public class Library {
                 return "Thank you! Enjoy the book";
             }
         }
-        return "";
+        return "That book is not available.";
     }
 }

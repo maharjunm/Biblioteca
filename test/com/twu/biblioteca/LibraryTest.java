@@ -36,6 +36,13 @@ public class LibraryTest {
     public void shouldPrintTheThankYouWhenChooseAvailableBook() {
         Library library = new Library();
 
-        Assert.assertEquals("Thank you! Enjoy the book",library.checkedOut("Head First Java"));
+        Assert.assertEquals("Thank you! Enjoy the book", library.checkedOut("Head First Java"));
+    }
+
+    @Test
+    public void shouldPrintTheInvalidMessageWhenChooseUnavailableBook() {
+        Library library = new Library();
+
+        Assert.assertEquals("That book is not available.", library.checkedOut("Maharjun"));
     }
 }
