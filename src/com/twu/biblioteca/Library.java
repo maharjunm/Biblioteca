@@ -24,7 +24,7 @@ public class Library {
     public String checkedOut(String thatBook) {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
-            if(thisBook.getName().equals(thatBook)){
+            if (thisBook.getName().equals(thatBook)) {
                 checkedOutBooks.add(books.get(i));
                 books.remove(i);
                 return "Thank you! Enjoy the book";
@@ -36,7 +36,7 @@ public class Library {
     public String returnBook(String bookName) {
         for (int i = 0; i < checkedOutBooks.size(); i++) {
             Book thisBook = (Book) checkedOutBooks.get(i);
-            if(thisBook.getName().equals(bookName)){
+            if (thisBook.getName().equals(bookName)) {
                 books.add(checkedOutBooks.get(i));
                 checkedOutBooks.remove(i);
                 return "Thank you for returning the book.";

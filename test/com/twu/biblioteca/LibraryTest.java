@@ -15,7 +15,7 @@ public class LibraryTest {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "--------------------------------------------------------------------";
 
-        assertEquals(line + "\n" + header + "\n" + line + "\n" + format , library.toString());
+        assertEquals(line + "\n" + header + "\n" + line + "\n" + format, library.toString());
     }
 
     @Test

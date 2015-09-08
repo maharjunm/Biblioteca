@@ -17,6 +17,6 @@ public class DisplayTest {
         System.setOut(new PrintStream(outContent));
         display.print("Maharjun");
 
-        assertEquals("Maharjun\n",outContent.toString());
+        assertEquals("Maharjun\n", outContent.toString());
     }
 }

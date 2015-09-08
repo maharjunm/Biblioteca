@@ -11,6 +11,6 @@ public class Display {
     }
 
     public void print(String output) {
-        System.out.println(output);
+        printStream.println(output);
     }
 }
