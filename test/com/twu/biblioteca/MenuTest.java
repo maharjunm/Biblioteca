@@ -12,4 +12,12 @@ public class MenuTest {
 
         assertEquals("1.List Books", menu.toString());
     }
+
+
+    @Test
+    public void shouldShowTheListAndQuitOptions() {
+        Menu menu = new Menu();
+
+        assertEquals("1.List Books\n2.Quit", menu.toString());
+    }
 }

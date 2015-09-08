@@ -3,7 +3,7 @@ package com.twu.biblioteca;
 import java.util.Scanner;
 
 public class Menu {
-    private String[] options = {"List Books"};
+    private String[] options = {"List Books","Quit"};
 
     @Override
     public String toString() {

@@ -71,4 +71,10 @@ public class BibliotecaAppTest {
 
         assertEquals("Welcome To Biblioteca\n1.List Books\nChoose Any One Option :\nSelect a valid option!\n", outContent.toString());
     }
+
+    @Test
+    public void shouldBreakTheLoopWhenWeChooseQuit() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+
+    }
 }

@@ -15,8 +15,8 @@ public class BibliotecaApp {
             Menu menu = new Menu();
             new Display(menu.toString()).print();
             new Display("Choose Any One Option :").print();
-            Scanner scanner = new Scanner(System.in);
-            String input = scanner.nextLine();
+            UserInput userInput = new UserInput();
+            String input = userInput.getInput();
             if (input.equals("1")) {
                 Library library = new Library();
                 new Display(library.toString()).print();
