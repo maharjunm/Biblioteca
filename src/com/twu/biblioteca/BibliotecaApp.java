@@ -17,6 +17,12 @@ public class BibliotecaApp {
 
     public void start() {
         display.print("Welcome to Biblioteca");
+        showOptions();
+        chooseOption();
+    }
+
+    private void chooseOption() {
+        display.print("Choose Any One Option :");
     }
 
     public void showOptions() {
