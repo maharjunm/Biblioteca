@@ -28,6 +28,8 @@ public class BibliotecaApp {
         String input = userInput.getInput();
         if(input.equals("1")){
             display.print(library.toString());
+        }else {
+            display.print("Select a valid option!");
         }
     }
 

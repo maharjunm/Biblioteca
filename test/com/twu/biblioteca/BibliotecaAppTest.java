@@ -70,7 +70,7 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(outContent));
         bibliotecaApp.start();
 
-        assertEquals("Welcome To Biblioteca\n1.List Books\nChoose Any One Option :\nSelect a valid option!\n", outContent.toString());
+        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\nChoose Any One Option :\nSelect a valid option!\n", outContent.toString());
     }
 
     @Test
