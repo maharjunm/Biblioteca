@@ -1,14 +1,21 @@
 package com.twu.biblioteca;
 
-import java.util.Scanner;
-
 public class BibliotecaApp {
 
+    private Menu menu;
+    private Display display;
+    private Library library;
+
+    public BibliotecaApp(Library library, Display display, Menu menu) {
+        this.library = library;
+        this.display = display;
+        this.menu = menu;
+    }
+
     public static void main(String[] args) {
-        BibliotecaApp bibliotecaApp = new BibliotecaApp();
-        bibliotecaApp.start();
     }
 
     public void start() {
+        display.print("Welcome to Biblioteca");
     }
 }
