@@ -24,13 +24,13 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldPrintTheWelcomeMessageAndShowTheListOptions() {
+    public void shouldPrintShowTheListOptions() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        bibliotecaApp.start();
+        bibliotecaApp.showOptions();
 
-        assertEquals("Welcome To Biblioteca\n1.List Books\n", outContent.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n", outContent.toString());
     }
 
     @Test

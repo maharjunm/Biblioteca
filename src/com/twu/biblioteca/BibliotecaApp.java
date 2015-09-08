@@ -18,4 +18,9 @@ public class BibliotecaApp {
     public void start() {
         display.print("Welcome to Biblioteca");
     }
+
+    public void showOptions() {
+        String menuOptions = menu.toString();
+        display.print(menuOptions);
+    }
 }
