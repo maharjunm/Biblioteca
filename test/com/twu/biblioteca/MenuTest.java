@@ -10,14 +10,20 @@ public class MenuTest {
     public void shouldShowTheListBooksOption() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books", menu.toString());
+        assertEquals("1.List Books\n2.Quit\n3.CheckOut Book", menu.toString());
     }
-
 
     @Test
     public void shouldShowTheListAndQuitOptions() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n2.Quit", menu.toString());
+        assertEquals("1.List Books\n2.Quit\n3.CheckOut Book", menu.toString());
+    }
+
+    @Test
+    public void shouldShowTheListQuitAndCheckOutBookOptions() {
+        Menu menu = new Menu();
+
+        assertEquals("1.List Books\n2.Quit\n3.CheckOut Book", menu.toString());
     }
 }
