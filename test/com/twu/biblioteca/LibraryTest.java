@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,5 +16,12 @@ public class LibraryTest {
         String line = "____________________________________________________________________";
 
         assertEquals(line + "\n" + header + "\n" + line + "\n" + format , library.toString());
+    }
+
+    @Test
+    public void shouldReturnTheFalseWhenBookIsNotPresent() {
+        Library library = new Library();
+
+        assertFalse(library.findByBookName("Maharjun"));
     }
 }

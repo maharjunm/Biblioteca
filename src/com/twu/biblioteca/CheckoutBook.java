@@ -16,7 +16,7 @@ public class CheckoutBook {
 
     public boolean isPresent() {
         if(library.findByBookName(input)) {
-
+            return true;
         }
         return false;
     }

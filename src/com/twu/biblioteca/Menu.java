@@ -1,7 +1,5 @@
 package com.twu.biblioteca;
 
-import java.util.Scanner;
-
 public class Menu {
     private String[] options = {"List Books","Quit","CheckOut Book"};
 
