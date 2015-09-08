@@ -14,7 +14,7 @@ public class CheckoutBook {
             library.checkedOut(thatBook);
             display.print("Thank you! Enjoy the book");
         }else {
-            display.print("");
+            display.print("That book is not available.");
         }
     }
 }
