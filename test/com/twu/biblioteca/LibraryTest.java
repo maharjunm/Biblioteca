@@ -31,4 +31,11 @@ public class LibraryTest {
 
         Assert.assertEquals("That book is not available.", library.checkedOut("Maharjun"));
     }
+
+    @Test
+    public void shouldPrintTheInvalidMessageWhenWeWantToReturnInvalidBook() {
+        Library library = new Library();
+
+        Assert.assertEquals("That is not a valid book to return.", library.returnBook("Maharjun"));
+    }
 }

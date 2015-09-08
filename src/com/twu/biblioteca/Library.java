@@ -32,4 +32,8 @@ public class Library {
         }
         return "That book is not available.";
     }
+
+    public String returnBook(String bookName) {
+        return "That is not a valid book to return.";
+    }
 }
