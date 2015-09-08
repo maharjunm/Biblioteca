@@ -32,11 +32,13 @@ public class BibliotecaApp {
         chooseOption();
     }
 
-    private void chooseOption() {
+    public void chooseOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
         if (input.equals("1")) {
             display.print(library.toString());
+        }else if(input.equals("Quit")){
+            System.exit(0);
         } else {
             display.print("Select a valid option!");
         }

@@ -76,6 +76,13 @@ public class BibliotecaAppTest {
     @Test
     public void shouldBreakTheLoopWhenWeChooseQuit() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "Quit";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        System.setOut(new PrintStream(outContent));
+        bibliotecaApp.chooseOption();
 
+        assertEquals("Choose Any One Option :\n", outContent.toString());
     }
 }
