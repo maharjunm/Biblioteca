@@ -19,20 +19,6 @@ public class LibraryTest {
     }
 
     @Test
-    public void shouldReturnTheFalseWhenBookIsNotPresent() {
-        Library library = new Library();
-
-        assertFalse(library.findByBookName("Maharjun"));
-    }
-
-    @Test
-    public void shouldReturnTheTrueWhenBookIsPresent() {
-        Library library = new Library();
-
-        assertTrue(library.findByBookName("Head First Java"));
-    }
-
-    @Test
     public void shouldPrintTheThankYouWhenChooseAvailableBook() {
         Library library = new Library();
 

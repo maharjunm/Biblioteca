@@ -85,4 +85,17 @@ public class BibliotecaAppTest {
 
         assertEquals("Choose Any One Option :\n", outContent.toString());
     }
+
+    @Test
+    public void shouldReturnTheThankYouMessageWhenWeChooseAvailableBook() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "2";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        System.setOut(new PrintStream(outContent));
+        bibliotecaApp.chooseOption();
+
+        assertEquals("Choose Any One Option :\nThank you! Enjoy the book\n", outContent.toString());
+    }
 }

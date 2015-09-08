@@ -21,16 +21,6 @@ public class Library {
         return output.substring(0, output.length() - 1);
     }
 
-    public boolean findByBookName(String thatBookName) {
-        for (int i = 0; i < books.size(); i++) {
-            Book thisBook = (Book) books.get(i);
-            if(thisBook.getName().equals(thatBookName)){
-                return  true;
-            }
-        }
-        return false;
-    }
-
     public String checkedOut(String thatBook) {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
