@@ -11,16 +11,18 @@ public class BibliotecaApp {
 
     public void start() {
         new Display("Welcome To Biblioteca").print();
-        Menu menu = new Menu();
-        new Display(menu.toString()).print();
-        new Display("Choose Any One Option :").print();
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        if(input.equals("1")){
-            Library library = new Library();
-            new Display(library.toString()).print();
-        }else{
-            new Display("Select a valid option!").print();
+        while (true) {
+            Menu menu = new Menu();
+            new Display(menu.toString()).print();
+            new Display("Choose Any One Option :").print();
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
+            if (input.equals("1")) {
+                Library library = new Library();
+                new Display(library.toString()).print();
+            } else {
+                new Display("Select a valid option!").print();
+            }
         }
     }
 }
