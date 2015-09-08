@@ -19,4 +19,9 @@ public class Library {
         }
         return output.substring(0,output.length()-1);
     }
+
+    public boolean findByBookName(String name) {
+
+        return false;
+    }
 }

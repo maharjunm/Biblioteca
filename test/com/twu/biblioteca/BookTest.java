@@ -27,4 +27,11 @@ public class BookTest {
 
         Assert.assertEquals(format, book.toString());
     }
+
+    @Test
+    public void shouldReturnTheNameOfTheBook() {
+        Book book = new Book("Head First Java", "Bert Bates", 2009);
+
+        Assert.assertEquals("Head First Java", book.getName());
+    }
 }

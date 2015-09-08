@@ -17,4 +17,8 @@ public class Book {
         String format = String.format("%-20S%-20S%-20S", name, author, yearPublished);
         return format;
     }
+
+    public String getName() {
+        return name;
+    }
 }
