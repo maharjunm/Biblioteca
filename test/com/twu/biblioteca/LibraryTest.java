@@ -13,7 +13,7 @@ public class LibraryTest {
     public void shouldPrintThePreExistingListOfBooks() {
         Library library = new Library();
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
-        String line = "____________________________________________________________________";
+        String line = "--------------------------------------------------------------------";
 
         assertEquals(line + "\n" + header + "\n" + line + "\n" + format , library.toString());
     }

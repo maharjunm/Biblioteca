@@ -13,7 +13,7 @@ public class Library {
     @Override
     public String toString() {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
-        String line = "____________________________________________________________________";
+        String line = "--------------------------------------------------------------------";
         String output = line + "\n" + header + "\n" + line + "\n";
         for (int i = 0; i < books.size(); i++) {
             output += books.get(i) + "\n";

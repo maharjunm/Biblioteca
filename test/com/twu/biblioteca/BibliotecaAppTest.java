@@ -55,7 +55,7 @@ public class BibliotecaAppTest {
         bibliotecaApp.start();
         String format = String.format("%-20S%-20S%-20S", "Head First Java", "Bert Bates", 2009);
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
-        String line = "____________________________________________________________________";
+        String line = "--------------------------------------------------------------------";
 
         assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\nChoose Any One Option :\n" + line + "\n" + header + "\n" + line + "\n" + format + "\n", outContent.toString());
     }
