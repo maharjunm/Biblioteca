@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
 public class Menu {
-    private String[] options = {"List Books","Checkout Book"};
+    private String[] options = {"List Books","Checkout Book","Return Book"};
 
     @Override
     public String toString() {
