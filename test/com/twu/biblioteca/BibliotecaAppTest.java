@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
     Library library = new Library();
@@ -97,5 +98,16 @@ public class BibliotecaAppTest {
         bibliotecaApp.chooseOption();
 
         assertEquals("Choose Any One Option :\nThank you! Enjoy the book\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldCallTheInputMethodForTwoTimesWhenWeWantToGetListBooksThenQuit() {
+        UserInput userInput = mock(UserInput.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, this.userInput);
+
+        when(userInput.getInput()).thenReturn("1","Quit");
+        bibliotecaApp.start();
+
+        verify(userInput, times(2)).getInput();
     }
 }
