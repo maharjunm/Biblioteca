@@ -31,14 +31,15 @@ public class Library {
         return false;
     }
 
-    public void checkedOut(String thatBook) {
+    public String checkedOut(String thatBook) {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
             if(thisBook.getName().equals(thatBook)){
                 checkedOutBooks.add(books.get(i));
                 books.remove(i);
-
+                return "Thank you! Enjoy the book";
             }
         }
+        return "";
     }
 }

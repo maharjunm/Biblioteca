@@ -31,4 +31,11 @@ public class LibraryTest {
 
         assertTrue(library.findByBookName("Head First Java"));
     }
+
+    @Test
+    public void shouldPrintTheThankYouWhenChooseAvailableBook() {
+        Library library = new Library();
+
+        Assert.assertEquals("Thank you! Enjoy the book",library.checkedOut("Head First Java"));
+    }
 }

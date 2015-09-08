@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.io.PrintStream;
+
 public class BibliotecaApp {
 
     private UserInput userInput;
@@ -15,6 +17,13 @@ public class BibliotecaApp {
     }
 
     public static void main(String[] args) {
+        Library library = new Library();
+        Display display = new Display(new PrintStream(System.out));
+        UserInput userInput = new UserInput();
+        Menu menu = new Menu();
+
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        bibliotecaApp.start();
     }
 
     public void start() {
@@ -26,9 +35,9 @@ public class BibliotecaApp {
     private void chooseOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        if(input.equals("1")){
+        if (input.equals("1")) {
             display.print(library.toString());
-        }else {
+        } else {
             display.print("Select a valid option!");
         }
     }
