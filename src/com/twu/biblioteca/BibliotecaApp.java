@@ -43,6 +43,10 @@ public class BibliotecaApp {
             String bookName = userInput.getInput();
             String output = library.checkedOut(bookName);
             display.print(output);
+        }  else if (input.equals("3")) {
+            String bookName = "Head First Java";
+            String output = library.returnBook(bookName);
+            display.print(output);
         } else if (input.equals("Quit")) {
             System.exit(0);
         } else {

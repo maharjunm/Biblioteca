@@ -105,7 +105,7 @@ public class BibliotecaAppTest {
         UserInput userInput = mock(UserInput.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, this.userInput);
 
-        when(userInput.getInput()).thenReturn("1","Quit");
+        when(userInput.getInput()).thenReturn("1", "Quit");
         bibliotecaApp.start();
 
         verify(userInput, times(2)).getInput();
@@ -116,9 +116,23 @@ public class BibliotecaAppTest {
         UserInput userInput = mock(UserInput.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, this.userInput);
 
-        when(userInput.getInput()).thenReturn("1","2","Quit");
+        when(userInput.getInput()).thenReturn("1", "2", "Quit");
         bibliotecaApp.start();
 
         verify(userInput, times(3)).getInput();
+    }
+
+    @Test
+    public void shouldReturnTheThankYouMessageWhenWeChooseAvailableBookToReturn() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "3";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        System.setOut(new PrintStream(outContent));
+        library.checkedOut("Head First Java");
+        bibliotecaApp.chooseOption();
+
+        assertEquals("Choose Any One Option :\nThank you for returning the book.\n", outContent.toString());
     }
 }
