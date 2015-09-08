@@ -123,7 +123,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldReturnTheThankYouMessageWhenWeChooseAvailableBookToReturn() {
+    public void shouldReturnTheThankYouMessageWhenWeChooseValidBookToReturn() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "3";
@@ -134,5 +134,18 @@ public class BibliotecaAppTest {
         bibliotecaApp.chooseOption();
 
         assertEquals("Choose Any One Option :\nThank you for returning the book.\n", outContent.toString());
+    }
+
+    @Test
+    public void shouldReturnTheMessageWhenWeChooseInvalidBookToReturn() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "3";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        System.setOut(new PrintStream(outContent));
+        bibliotecaApp.chooseOption();
+
+        assertEquals("Choose Any One Option :\nThat is not a valid book to return.\n", outContent.toString());
     }
 }
