@@ -8,4 +8,8 @@ public class CheckoutBook {
         this.input = userInput.getInput();
         return input;
     }
+
+    public boolean isPresent() {
+        return false;
+    }
 }

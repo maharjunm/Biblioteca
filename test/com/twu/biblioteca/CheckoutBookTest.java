@@ -17,4 +17,15 @@ public class CheckoutBookTest {
 
         assertEquals(input,checkoutBook.getInput());
     }
+
+    @Test
+    public void shouldReturnFalseWhenBookIsNotPresentInTheLibrary() {
+        CheckoutBook checkoutBook = new CheckoutBook();
+        String input = "Maharjun";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        checkoutBook.getInput();
+
+        assertFalse(checkoutBook.isPresent());
+    }
 }
