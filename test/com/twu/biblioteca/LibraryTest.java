@@ -24,4 +24,11 @@ public class LibraryTest {
 
         assertFalse(library.findByBookName("Maharjun"));
     }
+
+    @Test
+    public void shouldReturnTheTrueWhenBookIsPresent() {
+        Library library = new Library();
+
+        assertTrue(library.findByBookName("Head First Java"));
+    }
 }

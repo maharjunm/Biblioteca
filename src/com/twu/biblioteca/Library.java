@@ -21,6 +21,12 @@ public class Library {
     }
 
     public boolean findByBookName(String thatBookName) {
+        for (int i = 0; i < books.size(); i++) {
+            Book thisBook = (Book) books.get(i);
+            if(thisBook.getName().equals(thatBookName)){
+                return  true;
+            }
+        }
         return false;
     }
 }
