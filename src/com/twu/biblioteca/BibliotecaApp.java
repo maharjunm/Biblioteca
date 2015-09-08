@@ -28,10 +28,8 @@ public class BibliotecaApp {
 
     public void start() {
         display.print("Welcome to Biblioteca");
-        while (true) {
-            showOptions();
-            chooseOption();
-        }
+        showOptions();
+        chooseOption();
     }
 
     public void chooseOption() {
@@ -43,7 +41,7 @@ public class BibliotecaApp {
             String bookName = userInput.getInput();
             String output = library.checkedOut(bookName);
             display.print(output);
-        }  else if (input.equals("3")) {
+        } else if (input.equals("3")) {
             String bookName = "Head First Java";
             String output = library.returnBook(bookName);
             display.print(output);

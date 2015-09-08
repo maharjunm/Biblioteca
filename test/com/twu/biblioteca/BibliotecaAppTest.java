@@ -101,28 +101,6 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void shouldCallTheInputMethodForTwoTimesWhenWeWantToGetListBooksThenQuit() {
-        UserInput userInput = mock(UserInput.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, this.userInput);
-
-        when(userInput.getInput()).thenReturn("1", "Quit");
-        bibliotecaApp.start();
-
-        verify(userInput, times(2)).getInput();
-    }
-
-    @Test
-    public void shouldCallTheInputMethodForThreeTimesWhenWeWantToGetListBooksCheckoutBookAndThenQuit() {
-        UserInput userInput = mock(UserInput.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, this.userInput);
-
-        when(userInput.getInput()).thenReturn("1", "2", "Quit");
-        bibliotecaApp.start();
-
-        verify(userInput, times(3)).getInput();
-    }
-
-    @Test
     public void shouldReturnTheThankYouMessageWhenWeChooseValidBookToReturn() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
