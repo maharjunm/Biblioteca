@@ -34,6 +34,14 @@ public class Library {
     }
 
     public String returnBook(String bookName) {
+        for (int i = 0; i < checkedOutBooks.size(); i++) {
+            Book thisBook = (Book) checkedOutBooks.get(i);
+            if(thisBook.getName().equals(bookName)){
+                books.add(checkedOutBooks.get(i));
+                checkedOutBooks.remove(i);
+                return "Thank you for returning the book.";
+            }
+        }
         return "That is not a valid book to return.";
     }
 }

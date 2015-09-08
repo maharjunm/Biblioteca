@@ -38,4 +38,12 @@ public class LibraryTest {
 
         Assert.assertEquals("That is not a valid book to return.", library.returnBook("Maharjun"));
     }
+
+    @Test
+    public void shouldPrintTheThankYouMessageWhenWeWantToReturnValidBook() {
+        Library library = new Library();
+        library.checkedOut("Head First Java");
+        
+        Assert.assertEquals("Thank you for returning the book.", library.returnBook("Head First Java"));
+    }
 }
