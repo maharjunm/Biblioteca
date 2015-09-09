@@ -21,10 +21,10 @@ public class Library {
         return output.substring(0, output.length() - 1);
     }
 
-    public String checkedOut(String thatBook) {
+    public String checkedOut(String thatBookName) {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
-            if (thisBook.getName().equals(thatBook)) {
+            if (thisBook.searchByname(thatBookName)) {
                 checkedOutBooks.add(books.get(i));
                 books.remove(i);
                 return "Thank you! Enjoy the book";
@@ -36,7 +36,7 @@ public class Library {
     public String returnBook(String bookName) {
         for (int i = 0; i < checkedOutBooks.size(); i++) {
             Book thisBook = (Book) checkedOutBooks.get(i);
-            if (thisBook.getName().equals(bookName)) {
+            if (thisBook.searchByname(bookName)) {
                 books.add(checkedOutBooks.get(i));
                 checkedOutBooks.remove(i);
                 return "Thank you for returning the book.";
