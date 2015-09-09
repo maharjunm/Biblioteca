@@ -63,15 +63,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintTheInvalidOptionWhenWeChoose2() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "2";
+        String input = "5";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
-        bibliotecaApp.start();
+        bibliotecaApp.chooseOption();
 
-        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\nChoose Any One Option :\nSelect a valid option!\n", outContent.toString());
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print("Select a valid option!");
     }
 
     @Test
