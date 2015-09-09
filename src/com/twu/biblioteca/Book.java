@@ -19,7 +19,7 @@ public class Book {
     }
 
     public boolean searchByname(String thatBookName) {
-        if(this.name.equals(thatBookName))
+        if (this.name.equals(thatBookName))
             return true;
         return false;
     }

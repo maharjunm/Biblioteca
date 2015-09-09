@@ -16,6 +16,6 @@ public class DisplayTest {
         Display display = new Display(printStream);
         display.print("Maharjun");
 
-        verify(printStream,times(1)).println("Maharjun");
+        verify(printStream, times(1)).println("Maharjun");
     }
 }

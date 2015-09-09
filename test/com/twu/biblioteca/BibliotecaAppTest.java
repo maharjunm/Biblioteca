@@ -5,29 +5,17 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
+
     Library library = new Library();
     Menu menu = new Menu();
     Display display = new Display(new PrintStream(System.out));
     UserInput userInput = new UserInput();
 
-    @Test
-    public void shouldPrintTheWelcomeMessage() {
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-
-        when(userInput.getInput()).thenReturn("1").thenReturn("Quit");
-        bibliotecaApp.start();
-
-        verify(display, times(1)).print("Welcome to Biblioteca");
-    }
 
     @Test
     public void shouldPrintMenuOptions() {
@@ -36,14 +24,6 @@ public class BibliotecaAppTest {
         bibliotecaApp.showOptions();
 
         verify(display, times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book");
-    }
-
-    @Test
-    public void shouldPrintTheOptionsAndChooseOption() {
-        Display display = mock(Display.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        bibliotecaApp.chooseOption();
-        verify(display, times(1)).print("Choose Any One Option :");
     }
 
     @Test
@@ -138,15 +118,5 @@ public class BibliotecaAppTest {
         bibliotecaApp.chooseOption();
 
         verify(userInput, times(1)).getInput();
-    }
-
-    @Test
-    public void shouldCallTheGetInputMethodForTwoTimes() {
-        UserInput userInput = mock(UserInput.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        when(userInput.getInput()).thenReturn("1").thenReturn("2").thenReturn("Quit");
-        bibliotecaApp.start();
-
-        verify(userInput, times(2)).getInput();
     }
 }
