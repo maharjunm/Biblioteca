@@ -27,7 +27,7 @@
     
         cur['ant.project.default-target'] = 'coverage';
     
-        cur['ant.project.invoked-targets'] = 'coverage';
+        cur['ant.project.invoked-targets'] = 'compile,run';
     
         cur['ant.project.name'] = 'BibliotecaVersion1';
     
@@ -131,7 +131,7 @@
     
         cur['sun.io.unicode.encoding'] = 'UnicodeBig';
     
-        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BibliotecaAppTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BibliotecaAppTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher161485828087452399.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit4943699158788759161.properties';
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BibliotecaAppTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BibliotecaAppTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher377365404194521453.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit2013870134032955651.properties';
     
         cur['sun.java.launcher'] = 'SUN_STANDARD';
     
@@ -195,8 +195,8 @@
 <tr valign="top">
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
-<tr valign="top" class="Failure">
-<td><a title="Display all tests" href="0_BibliotecaAppTest.html">BibliotecaAppTest</a></td><td><a title="Display all tests" href="0_BibliotecaAppTest.html">3</a></td><td>0</td><td><a title="Display only failures" href="0_BibliotecaAppTest-fails.html">2</a></td><td>0</td><td>0.191</td><td>2015-09-07T05:28:39</td><td>INmaharjun.local</td>
+<tr valign="top" class="Error">
+<td><a title="Display all tests" href="0_BibliotecaAppTest.html">BibliotecaAppTest</a></td><td><a title="Display all tests" href="0_BibliotecaAppTest.html">1</a></td><td><a title="Display only errors" href="0_BibliotecaAppTest-errors.html">1</a></td><td>0</td><td>0</td><td>0.053</td><td>2015-09-09T12:23:29</td><td>INmaharjun.local</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -204,42 +204,17 @@
 <tr valign="top">
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldPrintTheWelcomeMessage"></a>shouldPrintTheWelcomeMessage</td><td>Success</td><td></td><td>0.135</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="shouldPrintTheWelcomeMessageWhenWeStartTheApplication"></a>shouldPrintTheWelcomeMessageWhenWeStartTheApplication</td><td>Failure</td><td>expected:&lt;...lcome to Biblioteca
-[]&gt; but was:&lt;...lcome to Biblioteca
-[Book Name	Authour Name	Year Published
-Head First Java	Kathy Sierra	2009
-]&gt;<br>
+<tr valign="top" class="Error">
+<td><a name="initializationError"></a>initializationError</td><td>Error</td><td>Lorg/junit/contrib/java/lang/system/ExpectedSystemExit;<br>
 <br>
-<code>junit.framework.AssertionFailedError: expected:&lt;...lccome to Biblioteca<br>[]&gt; but was:&lt;...lcome to Biblioteca<br>[Book Name	Authour Name	Year Publishhed<br>Head First Java	Kathy Sierra	2009<br>]&gt;<br>	at com.twu.biblioteca.BibliotecaAppTest.shouldPrintTheWelcomeMessageWhenWeStartTheApplication(BibliotecaAppTest.java:28)<br>
-</code></td><td>0.005</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication"></a>shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication</td><td>Failure</td><td>expected:&lt;...lcome to Biblioteca
-[Head First Java
-Pragmatic Programming
-Martin's Refactoring]
-&gt; but was:&lt;...lcome to Biblioteca
-[Book Name	Authour Name	Year Published
-Head First Java	Kathy Sierra	2009]
-&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: expected:&lt;...lcome to Biblioteca<br>[Head First Java<br>Pragmatic Programming<br>Martin's Refactoring]<br>&gt; but was:&lt;...lcome to Biblioteca<br>[Book Name	Authour Namee	Year Published<br>Head First Java	Kathy Sierra	2009]<br>&gt;<br>	at com.twu.biblioteca.BibliotecaAppTest.shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication(BibliotecaAppTest.java:38)<br>
-</code></td><td>0.001</td>
+<code>java.lang.NoClassDefFoundError: Lorg/junit/contrib/java/lang/system/ExpectedSystemExit;<br>	at java.lang.Class.getDeclaredFields0(Native Method)<br>	at java.lang.Class.privateGetDeclaredFields(Class.java:2575)<br>	at java.lang.Class.getDeclaredFields(Class.java:1908)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)<br>	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)<br>	at java.security.AccessControlleer.doPrivileged(Native Method)<br>	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)<br>	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)<br>	at sun.misc.Launcher$AppClassLoaader.loadClass(Launcher.java:308)<br>	at java.lang.ClassLoader.loaadClass(ClassLoader.java:357)<br>
+</code></td><td>0.007</td>
 </tr>
 </table>
 <div class="Properties">
 <a href="javascript:displayProperties('com.twu.biblioteca.BibliotecaAppTest');">
                     Properties &raquo;
                 </a>
-</div>
-<div class="Properties">
-<a href="./0_BibliotecaAppTest-out.html">
-                        System.out &raquo;
-                    </a>
 </div>
 </body>
 </html>

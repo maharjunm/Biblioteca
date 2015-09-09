@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="2" hostname="INmaharjun.local" id="0" name="BibliotecaAppTest" package="com.twu.biblioteca" skipped="0" tests="3" time="0.191" timestamp="2015-09-07T05:28:39">
+  <testsuite errors="1" failures="0" hostname="INmaharjun.local" id="0" name="BibliotecaAppTest" package="com.twu.biblioteca" skipped="0" tests="1" time="0.053" timestamp="2015-09-09T12:23:29">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -98,7 +98,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BibliotecaAppTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BibliotecaAppTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher161485828087452399.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit4943699158788759161.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BibliotecaAppTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BibliotecaAppTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher377365404194521453.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit2013870134032955651.properties" />
 
           <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -144,60 +144,33 @@
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="ant.project.invoked-targets" value="coverage" />
+          <property name="ant.project.invoked-targets" value="compile,run" />
 
       </properties>
 
-      <testcase classname="com.twu.biblioteca.BibliotecaAppTest" name="shouldPrintTheWelcomeMessage" time="0.135" />
-
-      <testcase classname="com.twu.biblioteca.BibliotecaAppTest" name="shouldPrintTheWelcomeMessageWhenWeStartTheApplication" time="0.005">
-          <failure message="expected:&lt;...lcome to Biblioteca&#xa;[]&gt; but was:&lt;...lcome to Biblioteca&#xa;[Book Name&#x9;Authour Name&#x9;Year Published&#xa;Head First Java&#x9;Kathy Sierra&#x9;2009&#xa;]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;...lcome to Biblioteca
-[]&gt; but was:&lt;...lcome to Biblioteca
-[Book Name	Authour Name	Year Published
-Head First Java	Kathy Sierra	2009
-]&gt;
-	at com.twu.biblioteca.BibliotecaAppTest.shouldPrintTheWelcomeMessageWhenWeStartTheApplication(BibliotecaAppTest.java:28)
-</failure>
-
-      </testcase>
-
-      <testcase classname="com.twu.biblioteca.BibliotecaAppTest" name="shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication" time="0.001">
-          <failure message="expected:&lt;...lcome to Biblioteca&#xa;[Head First Java&#xa;Pragmatic Programming&#xa;Martin&apos;s Refactoring]&#xa;&gt; but was:&lt;...lcome to Biblioteca&#xa;[Book Name&#x9;Authour Name&#x9;Year Published&#xa;Head First Java&#x9;Kathy Sierra&#x9;2009]&#xa;&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;...lcome to Biblioteca
-[Head First Java
-Pragmatic Programming
-Martin&apos;s Refactoring]
-&gt; but was:&lt;...lcome to Biblioteca
-[Book Name	Authour Name	Year Published
-Head First Java	Kathy Sierra	2009]
-&gt;
-	at com.twu.biblioteca.BibliotecaAppTest.shouldPrintTheWelcomeMessageAndListOfBooksWhenWeStartTheApplication(BibliotecaAppTest.java:38)
-</failure>
+      <testcase classname="com.twu.biblioteca.BibliotecaAppTest" name="initializationError" time="0.007">
+          <error message="Lorg/junit/contrib/java/lang/system/ExpectedSystemExit;" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Lorg/junit/contrib/java/lang/system/ExpectedSystemExit;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575)
+	at java.lang.Class.getDeclaredFields(Class.java:1908)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+</error>
 
       </testcase>
 
-      <system-out><![CDATA[10:58:39,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-10:58:39,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-10:58:39,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
-10:58:39,095 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-10:58:39,095 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
-10:58:39,095 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
-10:58:39,114 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@7ac7a4e4 - URL [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-10:58:39,141 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-10:58:39,142 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-10:58:39,148 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-10:58:39,162 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-10:58:39,186 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-10:58:39,186 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-10:58:39,186 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-10:58:39,186 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-10:58:39,187 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d78f375 - Registering current configuration as safe fallback point
-
-]]></system-out>
+      <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INmaharjun.local" id="1" name="BookTest" package="com.twu.biblioteca" skipped="0" tests="3" time="0.175" timestamp="2015-09-07T05:28:40">
+  <testsuite errors="2" failures="3" hostname="INmaharjun.local" id="1" name="BookTest" package="com.twu.biblioteca" skipped="0" tests="5" time="0.207" timestamp="2015-09-09T12:23:30">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -295,7 +268,7 @@ Head First Java	Kathy Sierra	2009]
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BookTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BookTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher2646678609958227450.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit2762260380255862828.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.BookTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.BookTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher8786147825482117404.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit9187706521204584272.properties" />
 
           <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -341,32 +314,61 @@ Head First Java	Kathy Sierra	2009]
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="ant.project.invoked-targets" value="coverage" />
+          <property name="ant.project.invoked-targets" value="compile,run" />
 
       </properties>
 
-      <testcase classname="com.twu.biblioteca.BookTest" name="shouldReturnTheBookNameAndAuthorName" time="0.137" />
+      <testcase classname="com.twu.biblioteca.BookTest" name="shouldReturnTrueThisBookNameIsNotEqualToThatBookName" time="0.169">
+          <error message="com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z
+	at com.twu.biblioteca.BookTest.shouldReturnTrueThisBookNameIsNotEqualToThatBookName(BookTest.java:42)
+</error>
 
-      <testcase classname="com.twu.biblioteca.BookTest" name="shouldReturnTheBookNameAuthorNameAndYearPublished" time="0.0" />
+      </testcase>
 
-      <testcase classname="com.twu.biblioteca.BookTest" name="shouldReturnTheBookName" time="0.0" />
+      <testcase classname="com.twu.biblioteca.BookTest" name="shouldHaveNameAuthorAndYearPublishedForEachBookAndPrintThem" time="0.002">
+          <failure message="expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java&#x9;Bert Bates&#x9;2009]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java	Bert Bates	2009]&gt;
+	at com.twu.biblioteca.BookTest.shouldHaveNameAuthorAndYearPublishedForEachBookAndPrintThem(BookTest.java:30)
+</failure>
 
-      <system-out><![CDATA[10:58:40,491 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-10:58:40,491 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-10:58:40,491 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
-10:58:40,492 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-10:58:40,492 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
-10:58:40,492 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
-10:58:40,508 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@7ac7a4e4 - URL [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-10:58:40,544 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-10:58:40,545 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-10:58:40,551 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-10:58:40,565 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-10:58:40,591 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-10:58:40,591 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-10:58:40,591 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-10:58:40,592 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-10:58:40,593 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d78f375 - Registering current configuration as safe fallback point
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.BookTest" name="shouldHaveNameForEachBookAndPrintIt" time="0.001">
+          <failure message="expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java&#x9;Bert Bates&#x9;2009]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java	Bert Bates	2009]&gt;
+	at com.twu.biblioteca.BookTest.shouldHaveNameForEachBookAndPrintIt(BookTest.java:16)
+</failure>
+
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.BookTest" name="shouldHaveNameAndAuthorForEachBookAndPrintThem" time="0.001">
+          <failure message="expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java&#x9;Bert Bates&#x9;2009]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;H[ead First Java	Bert Bates	2009]&gt;
+	at com.twu.biblioteca.BookTest.shouldHaveNameAndAuthorForEachBookAndPrintThem(BookTest.java:23)
+</failure>
+
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.BookTest" name="shouldReturnTrueThisBookNameIsEqualToThatBookName" time="0.001">
+          <error message="com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z
+	at com.twu.biblioteca.BookTest.shouldReturnTrueThisBookNameIsEqualToThatBookName(BookTest.java:36)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[17:53:30,177 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+17:53:30,177 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+17:53:30,177 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+17:53:30,178 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+17:53:30,178 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+17:53:30,178 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
+17:53:30,194 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@7ac7a4e4 - URL [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+17:53:30,231 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+17:53:30,233 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+17:53:30,239 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+17:53:30,253 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+17:53:30,290 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+17:53:30,291 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+17:53:30,291 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+17:53:30,291 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+17:53:30,292 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d78f375 - Registering current configuration as safe fallback point
 
 ]]></system-out>
 
@@ -552,7 +554,380 @@ Head First Java	Kathy Sierra	2009]
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="1" failures="0" hostname="INmaharjun.local" id="3" name="MainMenuTest" package="com.twu.biblioteca" skipped="0" tests="1" time="0.0" timestamp="2015-09-07T05:28:44">
+  <testsuite errors="1" failures="0" hostname="INmaharjun.local" id="3" name="DisplayTest" package="com.twu.biblioteca" skipped="0" tests="1" time="0.039" timestamp="2015-09-09T12:23:31">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Mac OS X" />
+
+          <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+
+          <property name="java.runtime.version" value="1.8.0_31-b13" />
+
+          <property name="package.name" value="com.twu.biblioteca" />
+
+          <property name="cobertura.dir" value="lib/cobertura" />
+
+          <property name="user.name" value="maharjun" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib" />
+
+          <property name="ant.file.BibliotecaVersion1" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="BibliotecaVersion1" />
+
+          <property name="java.version" value="1.8.0_31" />
+
+          <property name="user.timezone" value="Asia/Kolkata" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="os.version" value="10.10.5" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.version" value="25.31-b07" />
+
+          <property name="ant.file.type.BibliotecaVersion1" value="file" />
+
+          <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+
+          <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+
+          <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+
+          <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="user.home" value="/Users/maharjun" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="gopherProxySet" value="false" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.DisplayTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.DisplayTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher8603636660765834072.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit2442998548208918506.properties" />
+
+          <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+
+          <property name="project.name" value="BibliotecaApp" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/var/folders/x4/y6p7k9m90mn9rp27ly31r2rr0000gp/T/" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="main.name" value="BibliotecaApp" />
+
+          <property name="os.arch" value="x86_64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+
+          <property name="user.dir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="ant.project.invoked-targets" value="compile,run" />
+
+      </properties>
+
+      <testcase classname="com.twu.biblioteca.DisplayTest" name="shouldPrintTheString" time="0.007">
+          <error message="org/mockito/Mockito" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/mockito/Mockito
+	at com.twu.biblioteca.DisplayTest.shouldPrintTheString(DisplayTest.java:15)
+Caused by: java.lang.ClassNotFoundException: org.mockito.Mockito
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="3" failures="1" hostname="INmaharjun.local" id="4" name="LibraryTest" package="com.twu.biblioteca" skipped="0" tests="5" time="0.169" timestamp="2015-09-09T12:23:31">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Mac OS X" />
+
+          <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+
+          <property name="java.runtime.version" value="1.8.0_31-b13" />
+
+          <property name="package.name" value="com.twu.biblioteca" />
+
+          <property name="cobertura.dir" value="lib/cobertura" />
+
+          <property name="user.name" value="maharjun" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib" />
+
+          <property name="ant.file.BibliotecaVersion1" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="BibliotecaVersion1" />
+
+          <property name="java.version" value="1.8.0_31" />
+
+          <property name="user.timezone" value="Asia/Kolkata" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="os.version" value="10.10.5" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.version" value="25.31-b07" />
+
+          <property name="ant.file.type.BibliotecaVersion1" value="file" />
+
+          <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+
+          <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+
+          <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+
+          <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="user.home" value="/Users/maharjun" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="gopherProxySet" value="false" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.LibraryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.LibraryTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher5194078773968862345.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit5968572905481760604.properties" />
+
+          <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+
+          <property name="project.name" value="BibliotecaApp" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/var/folders/x4/y6p7k9m90mn9rp27ly31r2rr0000gp/T/" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="main.name" value="BibliotecaApp" />
+
+          <property name="os.arch" value="x86_64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+
+          <property name="user.dir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="ant.project.invoked-targets" value="compile,run" />
+
+      </properties>
+
+      <testcase classname="com.twu.biblioteca.LibraryTest" name="shouldPrintThePreExistingListOfBooks" time="0.133">
+          <failure message="expected:&lt;...------------------&#xa;H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;...------------------&#xa;H[ead First Java&#x9;Bert Bates&#x9;2009]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;...------------------
+H[EAD FIRST JAVA     BERT BATES          2009                ]&gt; but was:&lt;...------------------
+H[ead First Java	Bert Bates	2009]&gt;
+	at com.twu.biblioteca.LibraryTest.shouldPrintThePreExistingListOfBooks(LibraryTest.java:18)
+</failure>
+
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.LibraryTest" name="shouldPrintTheThankYouWhenChooseAvailableBook" time="0.0">
+          <error message="com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z
+	at com.twu.biblioteca.Library.checkedOut(Library.java:27)
+	at com.twu.biblioteca.LibraryTest.shouldPrintTheThankYouWhenChooseAvailableBook(LibraryTest.java:25)
+</error>
+
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.LibraryTest" name="shouldPrintTheInvalidMessageWhenWeWantToReturnInvalidBook" time="0.0" />
+
+      <testcase classname="com.twu.biblioteca.LibraryTest" name="shouldPrintTheThankYouMessageWhenWeWantToReturnValidBook" time="0.0">
+          <error message="com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z
+	at com.twu.biblioteca.Library.checkedOut(Library.java:27)
+	at com.twu.biblioteca.LibraryTest.shouldPrintTheThankYouMessageWhenWeWantToReturnValidBook(LibraryTest.java:45)
+</error>
+
+      </testcase>
+
+      <testcase classname="com.twu.biblioteca.LibraryTest" name="shouldPrintTheInvalidMessageWhenChooseUnavailableBook" time="0.0">
+          <error message="com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: com.twu.biblioteca.Book.searchByname(Ljava/lang/String;)Z
+	at com.twu.biblioteca.Library.checkedOut(Library.java:27)
+	at com.twu.biblioteca.LibraryTest.shouldPrintTheInvalidMessageWhenChooseUnavailableBook(LibraryTest.java:32)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[17:53:31,843 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+17:53:31,843 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+17:53:31,843 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+17:53:31,843 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+17:53:31,843 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+17:53:31,843 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
+17:53:31,857 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@7ac7a4e4 - URL [jar:file:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+17:53:31,890 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+17:53:31,891 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+17:53:31,896 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+17:53:31,910 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+17:53:31,935 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+17:53:31,935 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+17:53:31,935 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+17:53:31,935 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+17:53:31,936 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d78f375 - Registering current configuration as safe fallback point
+
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="INmaharjun.local" id="5" name="MainMenuTest" package="com.twu.biblioteca" skipped="0" tests="1" time="0.0" timestamp="2015-09-07T05:28:44">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -705,6 +1080,322 @@ Head First Java	Kathy Sierra	2009]
 </error>
 
       </testcase>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="INmaharjun.local" id="6" name="MenuTest" package="com.twu.biblioteca" skipped="0" tests="4" time="0.038" timestamp="2015-09-09T12:23:33">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Mac OS X" />
+
+          <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+
+          <property name="java.runtime.version" value="1.8.0_31-b13" />
+
+          <property name="package.name" value="com.twu.biblioteca" />
+
+          <property name="cobertura.dir" value="lib/cobertura" />
+
+          <property name="user.name" value="maharjun" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib" />
+
+          <property name="ant.file.BibliotecaVersion1" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="BibliotecaVersion1" />
+
+          <property name="java.version" value="1.8.0_31" />
+
+          <property name="user.timezone" value="Asia/Kolkata" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="os.version" value="10.10.5" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.version" value="25.31-b07" />
+
+          <property name="ant.file.type.BibliotecaVersion1" value="file" />
+
+          <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+
+          <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+
+          <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+
+          <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="user.home" value="/Users/maharjun" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="gopherProxySet" value="false" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.MenuTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.MenuTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher6496937797105475037.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit4373476656891608420.properties" />
+
+          <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+
+          <property name="project.name" value="BibliotecaApp" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/var/folders/x4/y6p7k9m90mn9rp27ly31r2rr0000gp/T/" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="main.name" value="BibliotecaApp" />
+
+          <property name="os.arch" value="x86_64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+
+          <property name="user.dir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="ant.project.invoked-targets" value="compile,run" />
+
+      </properties>
+
+      <testcase classname="com.twu.biblioteca.MenuTest" name="shouldShowTheListAndQuitOptions" time="0.001" />
+
+      <testcase classname="com.twu.biblioteca.MenuTest" name="shouldShowTheListQuitAndCheckOutBookOptions" time="0.0" />
+
+      <testcase classname="com.twu.biblioteca.MenuTest" name="shouldShowTheListQuitCheckOutBookOptionsAndReturnBookOptions" time="0.001" />
+
+      <testcase classname="com.twu.biblioteca.MenuTest" name="shouldShowTheListBooksOption" time="0.0" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="INmaharjun.local" id="7" name="UserInputTest" package="com.twu.biblioteca" skipped="0" tests="1" time="0.039" timestamp="2015-09-09T12:23:33">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Mac OS X" />
+
+          <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+
+          <property name="java.runtime.version" value="1.8.0_31-b13" />
+
+          <property name="package.name" value="com.twu.biblioteca" />
+
+          <property name="cobertura.dir" value="lib/cobertura" />
+
+          <property name="user.name" value="maharjun" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib" />
+
+          <property name="ant.file.BibliotecaVersion1" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="BibliotecaVersion1" />
+
+          <property name="java.version" value="1.8.0_31" />
+
+          <property name="user.timezone" value="Asia/Kolkata" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="/Users/maharjun/IdeaProjects/BibliotecaApp/build.xml" />
+
+          <property name="os.version" value="10.10.5" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.version" value="25.31-b07" />
+
+          <property name="ant.file.type.BibliotecaVersion1" value="file" />
+
+          <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+
+          <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+
+          <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+
+          <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+
+          <property name="user.home" value="/Users/maharjun" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="gopherProxySet" value="false" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.twu.biblioteca.UserInputTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/maharjun/IdeaProjects/BibliotecaApp/reports/TEST-com.twu.biblioteca.UserInputTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junitvmwatcher1646643851411096740.properties propsfile=/Users/maharjun/IdeaProjects/BibliotecaApp/junit5552292419568663614.properties" />
+
+          <property name="java.class.path" value="/Users/maharjun/IdeaProjects/BibliotecaApp/instrumented:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/out:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/maharjun/IdeaProjects/BibliotecaApp/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+
+          <property name="project.name" value="BibliotecaApp" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/var/folders/x4/y6p7k9m90mn9rp27ly31r2rr0000gp/T/" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="main.name" value="BibliotecaApp" />
+
+          <property name="os.arch" value="x86_64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="/Users/maharjun/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+
+          <property name="user.dir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="/Users/maharjun/IdeaProjects/BibliotecaApp" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="ant.project.invoked-targets" value="compile,run" />
+
+      </properties>
+
+      <testcase classname="com.twu.biblioteca.UserInputTest" name="shouldGetTheInputFromTheUser" time="0.003" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
 
   </testsuite>
 </testsuites>
