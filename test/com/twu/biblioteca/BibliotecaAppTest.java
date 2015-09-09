@@ -12,15 +12,14 @@ import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
 
-    Library library = new Library();
-    Menu menu = new Menu();
-    Display display = new Display(new PrintStream(System.out));
-    Scanner scanner = new Scanner(System.in);
-    UserInput userInput = new UserInput(scanner);
 
     @Test
     public void shouldPrintMenuOptions() {
         Display display = mock(Display.class);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.showOptions();
 
@@ -29,11 +28,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintTheListWhenWeChoose1() {
-        Display display = mock(Display.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
+        Display display = mock(Display.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.chooseOption();
 
         String format = String.format("%-20S%-20S%-20S", "Head First Java", "Bert Bates", 2009);
@@ -46,11 +49,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintTheInvalidOptionWhenWeChoose2() {
-        Display display = mock(Display.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         String input = "5";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
+        Display display = mock(Display.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.chooseOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
@@ -64,10 +71,15 @@ public class BibliotecaAppTest {
     public void shouldExitTheApplicationWhenWeChooseQuit() {
         exit.expectSystemExit();
 
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         String input = "Quit";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
+        Display display = mock(Display.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.chooseOption();
 
     }
@@ -76,6 +88,8 @@ public class BibliotecaAppTest {
     public void shouldReturnTheThankYouMessageWhenWeChooseAvailableBook() {
         Display display = mock(Display.class);
         UserInput userInput = mock(UserInput.class);
+        Library library = new Library();
+        Menu menu = new Menu();
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
 
         when(userInput.getInput()).thenReturn("2").thenReturn("Head First Java");
@@ -87,11 +101,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldReturnTheThankYouMessageWhenWeChooseValidBookToReturn() {
-        Display display = mock(Display.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         String input = "3";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
+        Display display = mock(Display.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         library.checkedOut("Head First Java");
         bibliotecaApp.chooseOption();
 
@@ -100,11 +118,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldReturnTheMessageWhenWeChooseInvalidBookToReturn() {
-        Display display = mock(Display.class);
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         String input = "3";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
+        Display display = mock(Display.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.chooseOption();
 
         verify(display, times(1)).print("That is not a valid book to return.");
@@ -113,6 +135,9 @@ public class BibliotecaAppTest {
     @Test
     public void shouldPrintTheInvalidMessageWhenWeWantToReturnInvalidBookAfterChoosingListBooks() {
         UserInput userInput = mock(UserInput.class);
+        Library library = new Library();
+        Menu menu = new Menu();
+        Display display = new Display(new PrintStream(System.out));
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         when(userInput.getInput()).thenReturn("1").thenReturn("3").thenReturn("Quit");
         library.checkedOut("Head First Java");
