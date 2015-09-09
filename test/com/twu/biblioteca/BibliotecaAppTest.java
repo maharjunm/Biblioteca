@@ -93,15 +93,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldReturnTheThankYouMessageWhenWeChooseAvailableBook() {
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "2";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
+
+        when(userInput.getInput()).thenReturn("2").thenReturn("Head First Java");
         bibliotecaApp.chooseOption();
 
-        assertEquals("Choose Any One Option :\nThank you! Enjoy the book\n", outContent.toString());
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print("Thank you! Enjoy the book");
     }
 
     @Test
