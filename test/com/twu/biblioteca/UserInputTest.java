@@ -4,17 +4,20 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.util.Scanner;
 
 public class UserInputTest {
 
     @Test
     public void shouldGetTheInputFromTheUser() {
-        UserInput userInput = new UserInput();
-        String input = "1";
+        String input = "Maharjun";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
+        Scanner scanner = new Scanner(System.in);
+        UserInput userInput = new UserInput(scanner);
 
-        Assert.assertEquals("1", userInput.getInput());
+        Assert.assertEquals("Maharjun", userInput.getInput());
+        System.setIn(inputStream);
     }
 
 }

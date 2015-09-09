@@ -6,6 +6,7 @@ import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayInputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import static org.mockito.Mockito.*;
 
@@ -14,8 +15,8 @@ public class BibliotecaAppTest {
     Library library = new Library();
     Menu menu = new Menu();
     Display display = new Display(new PrintStream(System.out));
-    UserInput userInput = new UserInput();
-
+    Scanner scanner = new Scanner(System.in);
+    UserInput userInput = new UserInput(scanner);
 
     @Test
     public void shouldPrintMenuOptions() {
