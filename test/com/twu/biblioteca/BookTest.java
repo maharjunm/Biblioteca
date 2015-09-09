@@ -31,7 +31,13 @@ public class BookTest {
     }
 
     @Test
-    public void shouldReturnTrueTheBookIsToTheSameBook() {
+    public void shouldReturnTrueThisBookNameIsEqualToThatBookName() {
+        Book book = new Book("Head First Java", "Bert Bates", 2009);
+        assertTrue(book.searchByname("Head First Java"));
+    }
+
+    @Test
+    public void shouldReturnTrueThisBookNameIsNotEqualToThatBookName() {
         Book book = new Book("Head First Java", "Bert Bates", 2009);
         assertTrue(book.searchByname("Head First Java"));
     }
