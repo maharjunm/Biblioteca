@@ -105,16 +105,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldReturnTheThankYouMessageWhenWeChooseValidBookToReturn() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "3";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
         library.checkedOut("Head First Java");
         bibliotecaApp.chooseOption();
 
-        assertEquals("Choose Any One Option :\nThank you for returning the book.\n", outContent.toString());
+        verify(display,times(1)).print("Thank you for returning the book.");
     }
 
     @Test
@@ -125,6 +124,7 @@ public class BibliotecaAppTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         bibliotecaApp.chooseOption();
+
         verify(display,times(1)).print("That is not a valid book to return.");
     }
 }
