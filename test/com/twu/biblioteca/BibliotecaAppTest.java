@@ -1,6 +1,8 @@
 package com.twu.biblioteca;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -74,17 +76,19 @@ public class BibliotecaAppTest {
         verify(display, times(1)).print("Select a valid option!");
     }
 
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+
     @Test
-    public void shouldBreakTheLoopWhenWeChooseQuit() {
+    public void shouldExitTheApplicationWhenWeChooseQuit() {
+        exit.expectSystemExit();
+
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "Quit";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
         bibliotecaApp.chooseOption();
 
-        assertEquals("Choose Any One Option :\n", outContent.toString());
     }
 
     @Test
