@@ -6,8 +6,11 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class BibliotecaAppTest {
     Library library = new Library();
@@ -22,17 +25,17 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(outContent));
         bibliotecaApp.start();
 
-        assertEquals("Welcome to Biblioteca\n", outContent.toString());
+        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\n3.Return Book\nChoose Any One Option :\n", outContent.toString());
     }
 
     @Test
-    public void shouldPrintShowTheListOptions() {
+    public void shouldPrintMenuOptions() {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         bibliotecaApp.showOptions();
 
-        assertEquals("1.List Books\n2.Checkout Book\n", outContent.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", outContent.toString());
     }
 
     @Test
@@ -42,7 +45,7 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(outContent));
         bibliotecaApp.start();
 
-        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\nChoose Any One Option :\n", outContent.toString());
+        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\n3.Return Book\nChoose Any One Option :\n", outContent.toString());
     }
 
     @Test
@@ -116,14 +119,12 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldReturnTheMessageWhenWeChooseInvalidBookToReturn() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "3";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
         bibliotecaApp.chooseOption();
-
-        assertEquals("Choose Any One Option :\nThat is not a valid book to return.\n", outContent.toString());
+        verify(display,times(1)).print("That is not a valid book to return.");
     }
 }
