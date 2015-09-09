@@ -33,33 +33,32 @@ public class BibliotecaAppTest {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.showOptions();
 
-        verify(display,times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book");
+        verify(display, times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book");
     }
 
     @Test
     public void shouldPrintTheOptionsAndChooseOption() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        bibliotecaApp.start();
-
-        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\n3.Return Book\nChoose Any One Option :\n", outContent.toString());
+        bibliotecaApp.chooseOption();
+        verify(display, times(1)).print("Choose Any One Option :");
     }
 
     @Test
     public void shouldPrintTheListWhenWeChoose1() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        System.setOut(new PrintStream(outContent));
-        bibliotecaApp.start();
+        bibliotecaApp.chooseOption();
+
         String format = String.format("%-20S%-20S%-20S", "Head First Java", "Bert Bates", 2009);
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "--------------------------------------------------------------------";
 
-        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\nChoose Any One Option :\n" + line + "\n" + header + "\n" + line + "\n" + format + "\n", outContent.toString());
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(line + "\n" + header + "\n" + line + "\n" + format);
     }
 
     @Test
