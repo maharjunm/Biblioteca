@@ -2,21 +2,20 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-;
-import static org.junit.Assert.assertEquals;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class DisplayTest {
 
     @Test
     public void shouldPrintTheString() {
-        PrintStream printStream = new PrintStream(System.out);
+        PrintStream printStream = mock(PrintStream.class);
         Display display = new Display(printStream);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
         display.print("Maharjun");
 
-        assertEquals("Maharjun\n", outContent.toString());
+        verify(printStream,times(1)).println("Maharjun");
     }
 }
