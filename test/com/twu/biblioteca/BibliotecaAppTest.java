@@ -8,9 +8,7 @@ import java.io.PrintStream;
 
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
     Library library = new Library();
@@ -126,5 +124,16 @@ public class BibliotecaAppTest {
         bibliotecaApp.chooseOption();
 
         verify(display,times(1)).print("That is not a valid book to return.");
+    }
+
+    @Test
+    public void shouldPrintTheInvalidMessageWhenWeWantToReturnInvalidBookAfterChoosingListBooks() {
+        UserInput userInput = mock(UserInput.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        when(userInput.getInput()).thenReturn("1").thenReturn("3").thenReturn("Quit");
+        library.checkedOut("Head First Java");
+        bibliotecaApp.chooseOption();
+
+        verify(userInput,times(1)).getInput();
     }
 }
