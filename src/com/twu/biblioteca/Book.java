@@ -18,7 +18,9 @@ public class Book {
         return format;
     }
 
-    public String getName() {
-        return name;
+    public boolean searchByname(String thatBookName) {
+        if(this.name.equals(thatBookName))
+            return true;
+        return false;
     }
 }

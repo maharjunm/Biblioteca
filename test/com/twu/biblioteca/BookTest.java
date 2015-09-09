@@ -1,7 +1,9 @@
 package com.twu.biblioteca;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BookTest {
 
@@ -11,27 +13,26 @@ public class BookTest {
     public void shouldHaveNameForEachBookAndPrintIt() {
         Book book = new Book("Head First Java", "Bert Bates", 2009);
 
-        Assert.assertEquals(format, book.toString());
+        assertEquals(format, book.toString());
     }
 
     @Test
     public void shouldHaveNameAndAuthorForEachBookAndPrintThem() {
         Book book = new Book("Head First Java", "Bert Bates", 2009);
 
-        Assert.assertEquals(format, book.toString());
+        assertEquals(format, book.toString());
     }
 
     @Test
     public void shouldHaveNameAuthorAndYearPublishedForEachBookAndPrintThem() {
         Book book = new Book("Head First Java", "Bert Bates", 2009);
 
-        Assert.assertEquals(format, book.toString());
+        assertEquals(format, book.toString());
     }
 
     @Test
-    public void shouldReturnTheNameOfTheBook() {
+    public void shouldReturnTrueTheBookIsToTheSameBook() {
         Book book = new Book("Head First Java", "Bert Bates", 2009);
-
-        Assert.assertEquals("Head First Java", book.getName());
+        assertTrue(book.searchByname("Head First Java"));
     }
 }
