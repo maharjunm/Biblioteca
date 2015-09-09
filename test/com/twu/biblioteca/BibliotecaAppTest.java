@@ -6,7 +6,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -18,22 +17,23 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldPrintTheWelcomeMessage() {
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+
+        when(userInput.getInput()).thenReturn("1").thenReturn("Quit");
         bibliotecaApp.start();
 
-        assertEquals("Welcome to Biblioteca\n1.List Books\n2.Checkout Book\n3.Return Book\nChoose Any One Option :\n", outContent.toString());
+        verify(display, times(1)).print("Welcome to Biblioteca");
     }
 
     @Test
     public void shouldPrintMenuOptions() {
+        Display display = mock(Display.class);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
         bibliotecaApp.showOptions();
 
-        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", outContent.toString());
+        verify(display,times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book");
     }
 
     @Test
@@ -111,7 +111,7 @@ public class BibliotecaAppTest {
         library.checkedOut("Head First Java");
         bibliotecaApp.chooseOption();
 
-        verify(display,times(1)).print("Thank you for returning the book.");
+        verify(display, times(1)).print("Thank you for returning the book.");
     }
 
     @Test
@@ -123,7 +123,7 @@ public class BibliotecaAppTest {
         System.setIn(inContent);
         bibliotecaApp.chooseOption();
 
-        verify(display,times(1)).print("That is not a valid book to return.");
+        verify(display, times(1)).print("That is not a valid book to return.");
     }
 
     @Test
@@ -134,6 +134,16 @@ public class BibliotecaAppTest {
         library.checkedOut("Head First Java");
         bibliotecaApp.chooseOption();
 
-        verify(userInput,times(1)).getInput();
+        verify(userInput, times(1)).getInput();
+    }
+
+    @Test
+    public void shouldCallTheGetInputMethodForTwoTimes() {
+        UserInput userInput = mock(UserInput.class);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        when(userInput.getInput()).thenReturn("1").thenReturn("2").thenReturn("Quit");
+        bibliotecaApp.start();
+
+        verify(userInput, times(2)).getInput();
     }
 }
