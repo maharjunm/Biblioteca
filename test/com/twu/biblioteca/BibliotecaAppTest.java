@@ -71,7 +71,7 @@ public class BibliotecaAppTest {
     public void shouldExitTheApplicationWhenWeChooseQuit() {
         exit.expectSystemExit();
 
-        String input = "Quit";
+        String input = "4";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = new Library();
