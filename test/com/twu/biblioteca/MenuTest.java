@@ -10,27 +10,34 @@ public class MenuTest {
     public void shouldShowTheListBooksOption() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", menu.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit", menu.toString());
     }
 
     @Test
     public void shouldShowTheListAndQuitOptions() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", menu.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit", menu.toString());
     }
 
     @Test
     public void shouldShowTheListQuitAndCheckOutBookOptions() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", menu.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit", menu.toString());
     }
 
     @Test
     public void shouldShowTheListQuitCheckOutBookOptionsAndReturnBookOptions() {
         Menu menu = new Menu();
 
-        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book", menu.toString());
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit", menu.toString());
+    }
+
+    @Test
+    public void shouldShowTheListQuitCheckOutBookOptionsReturnBookOptionsAndQuitOptionAlso() {
+        Menu menu = new Menu();
+
+        assertEquals("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit", menu.toString());
     }
 }
