@@ -5,14 +5,12 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.mockito.InOrder;
 
-import java.util.Scanner;
-
 import static org.mockito.Mockito.*;
 
 public class DelegatorTest {
 
     @Test
-    public void shouldPrintTheWelcomeMessageAndOptions() {
+    public void shouldPrintOptions() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
         Display display = mock(Display.class);
@@ -26,7 +24,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheWelcomeMessageOptionsAndChooseOption() {
+    public void shouldPrintOptionsAndChooseOption() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
         Display display = mock(Display.class);
@@ -48,6 +46,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
+        when(userInput.getInput()).thenReturn("1");
         delegator.start();
 
         verify(userInput, times(1)).getInput();
