@@ -1,3 +1,4 @@
+//it delegates based on the options which user passes through console
 package com.twu.biblioteca;
 
 public class Delegator {

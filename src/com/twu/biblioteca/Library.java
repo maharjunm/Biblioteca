@@ -1,4 +1,4 @@
-//Library has list of books
+//Library has list of books and it check out the book and we can return a book to it
 package com.twu.biblioteca;
 
 import java.util.ArrayList;

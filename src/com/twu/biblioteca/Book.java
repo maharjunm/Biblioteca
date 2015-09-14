@@ -1,3 +1,4 @@
+//Book has name, author and year it published and it will compares other book by it's name
 package com.twu.biblioteca;
 
 public class Book {
