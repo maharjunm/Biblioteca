@@ -2,6 +2,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class Library {
 
@@ -13,6 +14,7 @@ public class Library {
         add(new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5));
         add(new Movie("PK", 2014, "Rajkumar Hirani", 8.3));
     }};
+    private ArrayList checkedOutMovies = new ArrayList<Movie>();
 
     @Override
     public String toString() {
@@ -62,6 +64,14 @@ public class Library {
     }
 
     public String checkedOutMovie(String thatMovieName) {
+        for (int i = 0; i < movies.size(); i++) {
+            Movie thisMovie = (Movie) movies.get(i);
+            if (thisMovie.searchByName(thatMovieName)) {
+                checkedOutMovies.add(movies.get(i));
+                movies.remove(i);
+                return "Thank you! Enjoy the movie";
+            }
+        }
         return "That movie is not available.";
     }
 }

@@ -64,4 +64,11 @@ public class LibraryTest {
 
         assertEquals(library.checkedOutMovie("Maharjun"),"That movie is not available.");
     }
+
+    @Test
+    public void shouldReturnTheThankYouWhenWeWantCheckOutValidMovie() {
+        Library library = new Library();
+
+        assertEquals(library.checkedOutMovie("3 Idiots"),"Thank you! Enjoy the movie");
+    }
 }
