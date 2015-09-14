@@ -15,5 +15,6 @@ public class Delegator {
 
     public void start() {
         display.print("Welcome to Biblioteca");
+        display.print(menu.toString());
     }
 }
