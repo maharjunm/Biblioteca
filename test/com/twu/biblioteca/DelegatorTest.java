@@ -186,7 +186,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
-        when(userInput.getInput()).thenReturn("4");
+        when(userInput.getInput()).thenReturn("6");
 
         delegator.start();
 
