@@ -21,7 +21,9 @@ public class Movie {
         return format;
     }
 
-    public boolean searchByName(String maharjun) {
+    public boolean searchByName(String thatMovieName) {
+        if(thatMovieName.equals(this.movieName))
+            return true;
         return false;
     }
 }
