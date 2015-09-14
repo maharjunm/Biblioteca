@@ -32,7 +32,7 @@ public class Delegator {
         } else if (input.equals("3")) {
             String bookName = userInput.getInput();
             display.print(library.returnBook(bookName));
-        } else if (input.equals("4")) {
+        } else if (input.equals("6")) {
             System.exit(0);
         } else {
             display.print("Select a valid option!");
