@@ -29,5 +29,6 @@ public class BibliotecaApp {
 
     public void start() {
         display.print("Welcome to Biblioteca");
+        delegator.start();
     }
 }
