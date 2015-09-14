@@ -141,6 +141,23 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintInvalidMessageWeWantToCheckOutInvalidMovie() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("4").thenReturn("Maharjun");
+        delegator.processTheOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.checkedOutMovie(userInput.getInput()));
+    }
+
+    @Test
     public void shouldPrintInvalidOptionWhenWeChooseInvalidOption() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
