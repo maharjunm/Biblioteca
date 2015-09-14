@@ -141,6 +141,23 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldCallTheListMoviesFromTheLibrary() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("4");
+        delegator.processTheOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        verify(library, times(1)).listMovies();
+    }
+
+    @Test
     public void shouldCallTheCheckoutMovieFromTheLibrary() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
@@ -148,7 +165,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
-        when(userInput.getInput()).thenReturn("4").thenReturn("Maharjun");
+        when(userInput.getInput()).thenReturn("5").thenReturn("Maharjun");
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
