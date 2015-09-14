@@ -8,8 +8,15 @@ public class MovieTest {
 
     @Test
     public void shouldReturnTheMovieName() {
-        Movie movie = new Movie("3 Idiots");
+        Movie movie = new Movie("3 Idiots", 2009);
 
-        assertEquals("3 Idiots", movie.toString());
+        assertEquals("3 Idiots\t2009", movie.toString());
+    }
+
+    @Test
+    public void shouldReturnTheMovieNameAndYear() {
+        Movie movie = new Movie("3 Idiots", 2009);
+
+        assertEquals("3 Idiots\t2009", movie.toString());
     }
 }
