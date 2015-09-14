@@ -46,4 +46,15 @@ public class LibraryTest {
 
         Assert.assertEquals("Thank you for returning the book.", library.returnBook("Head First Java"));
     }
+
+    @Test
+    public void shouldPrintTheListOfMovies() {
+        String line = "---------------------------------------------------------------------------------";
+        String header = String.format("%-20S%-20S%-20S%-20S", "Movie Name", "Year It Released ", "Direactor", "Rating of The Movie");
+        String movie1 = String.format("%-20S%-20S%-20S%-20S", "3 Idiots", 2009, "Rajkumar Hirani", 8.5);
+        String movie2 = String.format("%-20S%-20S%-20S%-20S", "PK", 2014, "Rajkumar Hirani", 8.3);
+        Library library = new Library();
+
+        Assert.assertEquals(library.listMovies(), line + "\n" + header + "\n" + line + "\n" + movie1 + "\n" + movie2 );
+    }
 }

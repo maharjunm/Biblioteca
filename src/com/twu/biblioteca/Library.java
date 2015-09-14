@@ -9,6 +9,10 @@ public class Library {
         add(new Book("Head First Java", "Bert Bates", 2009));
     }};
     private ArrayList checkedOutBooks = new ArrayList<Book>();
+    private ArrayList movies = new ArrayList<Movie>() {{
+        add(new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5));
+        add(new Movie("PK", 2014, "Rajkumar Hirani", 8.3));
+    }};
 
     @Override
     public String toString() {
@@ -43,5 +47,17 @@ public class Library {
             }
         }
         return "That is not a valid book to return.";
+    }
+
+    public String listMovies() {
+        String result = "";
+        String line = "---------------------------------------------------------------------------------";
+        String header = String.format("%-20S%-20S%-20S%-20S", "Movie Name", "Year It Released ", "Direactor", "Rating of The Movie");
+        result += line + "\n" + header + "\n" + line + "\n";
+        for (int i = 0; i < movies.size(); i++) {
+            result += movies.get(i) + "\n";
+        }
+        return result.substring(0,result.length()-1);
+
     }
 }
