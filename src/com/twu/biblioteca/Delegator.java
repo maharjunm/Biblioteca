@@ -14,6 +14,12 @@ public class Delegator {
     }
 
     public void start() {
+        while(true) {
+            processTheOption();
+        }
+    }
+
+    public void processTheOption() {
         display.print(menu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();

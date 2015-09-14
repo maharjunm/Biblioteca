@@ -18,7 +18,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -33,7 +33,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -49,7 +49,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
-        delegator.start();
+        delegator.processTheOption();
 
         verify(userInput, times(1)).getInput();
     }
@@ -63,7 +63,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -80,7 +80,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("2").thenReturn("Maharjun");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -97,7 +97,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("2").thenReturn("Head First Java");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -114,7 +114,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("3").thenReturn("Maharjun");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -132,7 +132,7 @@ public class DelegatorTest {
 
         when(userInput.getInput()).thenReturn("3").thenReturn("Head First Java");
         library.checkedOut("Head First Java");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -149,7 +149,7 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("6");
-        delegator.start();
+        delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
@@ -162,6 +162,22 @@ public class DelegatorTest {
 
     @Test
     public void shouldExitTheApplicationWhenWeChoose4() {
+        exit.expectSystemExit();
+
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("4");
+
+        delegator.processTheOption();
+
+    }
+
+    @Test
+    public void shouldExitTheApplicationWhenWeChoose4FromTheWhileLoop() {
         exit.expectSystemExit();
 
         Menu menu = mock(Menu.class);
