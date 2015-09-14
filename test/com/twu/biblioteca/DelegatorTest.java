@@ -141,7 +141,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintInvalidMessageWeWantToCheckOutInvalidMovie() {
+    public void shouldCallTheCheckoutMovieFromTheLibrary() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
         Display display = mock(Display.class);
