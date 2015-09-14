@@ -20,6 +20,8 @@ public class Delegator {
         String input = userInput.getInput();
         if(input.equals("1")){
             display.print(library.toString());
+        }else if(input.equals("4")){
+            System.exit(0);
         }
     }
 }
