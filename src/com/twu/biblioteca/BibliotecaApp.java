@@ -30,8 +30,10 @@ public class BibliotecaApp {
 
     public void start() {
         display.print("Welcome to Biblioteca");
-        showOptions();
-        chooseOption();
+        while (true) {
+            showOptions();
+            chooseOption();
+        }
     }
 
     public void chooseOption() {
@@ -44,11 +46,11 @@ public class BibliotecaApp {
             String output = library.checkedOut(bookName);
             display.print(output);
         } else if (input.equals("3")) {
-            String bookName = "Head First Java";
+            String bookName = userInput.getInput();
             String output = library.returnBook(bookName);
             display.print(output);
         } else if (input.equals("4")) {
-            stop();
+            System.exit(0);
         } else {
             display.print("Select a valid option!");
         }
@@ -57,9 +59,5 @@ public class BibliotecaApp {
     public void showOptions() {
         String menuOptions = menu.toString();
         display.print(menuOptions);
-    }
-
-    public void stop() {
-        System.exit(0);
     }
 }

@@ -23,7 +23,7 @@ public class BibliotecaAppTest {
         BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
         bibliotecaApp.showOptions();
 
-        verify(display, times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book");
+        verify(display, times(1)).print("1.List Books\n2.Checkout Book\n3.Return Book\n4.Quit");
     }
 
     @Test

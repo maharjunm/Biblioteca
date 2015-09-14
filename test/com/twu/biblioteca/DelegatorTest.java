@@ -65,4 +65,22 @@ public class DelegatorTest {
 
         verify(userInput, times(1)).getInput();
     }
+
+    @Test
+    public void shouldPrintTheListBooksWhenWeChoose1() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("1");
+        delegator.start();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Welcome to Biblioteca");
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.toString());
+    }
 }
