@@ -5,16 +5,14 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
-    private UserInput userInput;
-    private Menu menu;
-    private Display display;
-    private Library library;
 
-    public BibliotecaApp(Library library, Display display, Menu menu, UserInput userInput) {
-        this.library = library;
+    private final Delegator delegator;
+    private final Display display;
+
+
+    public BibliotecaApp(Delegator delegator, Display display) {
+        this.delegator = delegator;
         this.display = display;
-        this.menu = menu;
-        this.userInput = userInput;
     }
 
     public static void main(String[] args) {
@@ -24,40 +22,12 @@ public class BibliotecaApp {
         UserInput userInput = new UserInput(scanner);
         Menu menu = new Menu();
 
-        BibliotecaApp bibliotecaApp = new BibliotecaApp(library, display, menu, userInput);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+        BibliotecaApp bibliotecaApp = new BibliotecaApp(delegator, display);
         bibliotecaApp.start();
     }
 
     public void start() {
         display.print("Welcome to Biblioteca");
-        while (true) {
-            showOptions();
-            chooseOption();
-        }
-    }
-
-    public void chooseOption() {
-        display.print("Choose Any One Option :");
-        String input = userInput.getInput();
-        if (input.equals("1")) {
-            display.print(library.toString());
-        } else if (input.equals("2")) {
-            String bookName = userInput.getInput();
-            String output = library.checkedOut(bookName);
-            display.print(output);
-        } else if (input.equals("3")) {
-            String bookName = userInput.getInput();
-            String output = library.returnBook(bookName);
-            display.print(output);
-        } else if (input.equals("4")) {
-            System.exit(0);
-        } else {
-            display.print("Select a valid option!");
-        }
-    }
-
-    public void showOptions() {
-        String menuOptions = menu.toString();
-        display.print(menuOptions);
     }
 }
