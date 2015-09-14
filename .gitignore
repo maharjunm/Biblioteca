@@ -2,3 +2,6 @@
 .idea
 *.iml
 .DS_Store
+cobertura.ser
+/reports/
+/instrumented/

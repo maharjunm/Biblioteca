@@ -52,4 +52,17 @@ public class DelegatorTest {
         inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
     }
+
+    @Test
+    public void shouldGetTheInputFromTheUser() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        delegator.start();
+
+        verify(userInput, times(1)).getInput();
+    }
 }
