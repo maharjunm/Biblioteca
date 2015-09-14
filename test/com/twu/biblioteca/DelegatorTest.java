@@ -17,6 +17,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
+        when(userInput.getInput()).thenReturn("1");
         delegator.start();
 
         InOrder inOrder = inOrder(display);
