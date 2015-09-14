@@ -14,7 +14,6 @@ public class Delegator {
     }
 
     public void start() {
-        display.print("Welcome to Biblioteca");
         display.print(menu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();

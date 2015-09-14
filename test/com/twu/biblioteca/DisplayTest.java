@@ -12,10 +12,9 @@ public class DisplayTest {
 
     @Test
     public void shouldPrintTheString() {
-        PrintStream printStream = mock(PrintStream.class);
-        Display display = new Display(printStream);
+        Display display = mock(Display.class);
         display.print("Maharjun");
 
-        verify(printStream, times(1)).println("Maharjun");
+        verify(display, times(1)).print("Maharjun");
     }
 }
