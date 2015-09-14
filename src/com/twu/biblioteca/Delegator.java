@@ -18,9 +18,12 @@ public class Delegator {
         display.print(menu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        if(input.equals("1")){
+        if (input.equals("1")) {
             display.print(library.toString());
-        }else if(input.equals("4")){
+        } else if (input.equals("2")) {
+            String bookName = userInput.getInput();
+            display.print(library.checkedOut(bookName));
+        } else if (input.equals("4")) {
             System.exit(0);
         }
     }
