@@ -104,6 +104,42 @@ public class DelegatorTest {
         inOrder.verify(display, times(1)).print(library.checkedOut(userInput.getInput()));
     }
 
+    @Test
+    public void shouldPrintThankYouMessageWhenWeWantToCheckOutavailableBook() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("2").thenReturn("Head First Java");
+        delegator.start();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Welcome to Biblioteca");
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.checkedOut(userInput.getInput()));
+    }
+
+    @Test
+    public void shouldPrintInvalidMessageWhenWeWantToReturnUnavailableBook() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library);
+
+        when(userInput.getInput()).thenReturn("3").thenReturn("Maharjun");
+        delegator.start();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Welcome to Biblioteca");
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.returnBook(userInput.getInput()));
+    }
+
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
