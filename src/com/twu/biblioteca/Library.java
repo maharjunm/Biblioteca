@@ -60,4 +60,8 @@ public class Library {
         return result.substring(0,result.length()-1);
 
     }
+
+    public String checkedOutMovie(String thatMovieName) {
+        return "That movie is not available.";
+    }
 }
