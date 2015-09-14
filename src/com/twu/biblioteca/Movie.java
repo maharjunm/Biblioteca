@@ -20,4 +20,8 @@ public class Movie {
         String format = String.format("%-20S%-20S%-20S%-20S",movieName,yearReleased,director,ratingOfTheMovie);
         return format;
     }
+
+    public boolean searchByName(String maharjun) {
+        return false;
+    }
 }

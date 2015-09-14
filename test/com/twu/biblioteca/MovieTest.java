@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class MovieTest {
 
@@ -34,5 +35,12 @@ public class MovieTest {
         Movie movie = new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5);
 
         assertEquals(format, movie.toString());
+    }
+
+    @Test
+    public void shouldReturnFalseWhenTwoMoviesAreNotEqual() {
+        Movie movie = new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5);
+
+        assertFalse(movie.searchByName("maharjun"));
     }
 }
