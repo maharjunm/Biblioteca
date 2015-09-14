@@ -17,6 +17,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return movieName + "\t" + yearReleased + "\t" + director + "\t" + ratingOfTheMovie;
+        String format = String.format("%-20S%-20S%-20S%-20S",movieName,yearReleased,director,ratingOfTheMovie);
+        return format;
     }
 }
