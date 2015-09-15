@@ -48,6 +48,7 @@ public class Delegator {
         if (userAccount.compare(loginId, password)){
             String userOptions = menu.userOptions();
             display.print(userOptions);
+            display.print("Choose Any One Option :");
         }else {
             display.print("Invalid User Name or Password!");
         }

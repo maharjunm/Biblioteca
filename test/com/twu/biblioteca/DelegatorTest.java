@@ -105,6 +105,25 @@ public class DelegatorTest {
         Delegator delegator = new Delegator(menu, userInput, display, library, userAccounts);
 
         when(userInput.getInput()).thenReturn("4").thenReturn("B09-1893").thenReturn("B091893");
+        when(userAccounts.compare("B09-1893", "B091893")).thenReturn(true);
+        delegator.processTheOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(menu.userOptions());
+    }
+
+    @Test
+    public void shouldPrintTheUserOptionsAndAskForTheChooseOptionWhenPasswordsAreMatchedWhenWeChoose4() {
+        Menu menu = mock(Menu.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        UserInput userInput = mock(UserInput.class);
+        UserAccounts userAccounts = mock(UserAccounts.class);
+        Delegator delegator = new Delegator(menu, userInput, display, library, userAccounts);
+
+        when(userInput.getInput()).thenReturn("4").thenReturn("B09-1893").thenReturn("B091893");
         when(userAccounts.compare("B09-1893","B091893")).thenReturn(true);
         delegator.processTheOption();
 
@@ -112,6 +131,7 @@ public class DelegatorTest {
         inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print(menu.userOptions());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
     }
 
     @Test
