@@ -2,7 +2,6 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.PriorityQueue;
 
 public class Library {
 
