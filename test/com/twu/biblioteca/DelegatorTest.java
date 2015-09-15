@@ -9,13 +9,15 @@ import static org.mockito.Mockito.*;
 
 public class DelegatorTest {
 
+    Menu menu = mock(Menu.class);
+    Library library = mock(Library.class);
+    Display display = mock(Display.class);
+    UserInput userInput = mock(UserInput.class);
+    UserAccounts userAccounts = mock(UserAccounts.class);
+    Delegator delegator = new Delegator(menu, userInput, display, library, userAccounts);
+
     @Test
     public void shouldPrintOptions() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
         delegator.processTheOption();
@@ -26,11 +28,6 @@ public class DelegatorTest {
 
     @Test
     public void shouldPrintOptionsAndChooseOption() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
         delegator.processTheOption();
@@ -42,11 +39,7 @@ public class DelegatorTest {
 
     @Test
     public void shouldGetTheInputFromTheUser() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
+
 
         when(userInput.getInput()).thenReturn("1");
         delegator.processTheOption();
@@ -56,11 +49,6 @@ public class DelegatorTest {
 
     @Test
     public void shouldPrintTheListBooksWhenWeChoose1() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("1");
         delegator.processTheOption();
@@ -73,11 +61,6 @@ public class DelegatorTest {
 
     @Test
     public void shouldPrintTheListOfMoviesWhenWeChoose2() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("2");
         delegator.processTheOption();
@@ -90,11 +73,6 @@ public class DelegatorTest {
 
     @Test
     public void shouldCallTheCheckoutMovieFromTheLibraryWhenWeChoose3() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("3").thenReturn("Maharjun");
         delegator.processTheOption();
@@ -106,12 +84,19 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheInvalidMessageWhenPasswordsAreNotMatchedWhenWeChoose4() {
+
+        when(userInput.getInput()).thenReturn("4").thenReturn("Maharjun").thenReturn("Maharjun");
+        delegator.processTheOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print(menu.toString());
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print("Invalid User Name or Password!");
+    }
+
+    @Test
     public void shouldPrintInvalidOptionWhenWeChooseInvalidOption() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("7");
         delegator.processTheOption();
@@ -129,12 +114,6 @@ public class DelegatorTest {
     public void shouldExitTheApplicationWhenWeChoose5() {
         exit.expectSystemExit();
 
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
-
         when(userInput.getInput()).thenReturn("5");
 
         delegator.processTheOption();
@@ -144,12 +123,6 @@ public class DelegatorTest {
     @Test
     public void shouldExitTheApplicationWhenWeChoose4FromTheWhileLoop() {
         exit.expectSystemExit();
-
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
 
         when(userInput.getInput()).thenReturn("5");
 

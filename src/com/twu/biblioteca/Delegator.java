@@ -6,16 +6,18 @@ public class Delegator {
     private final UserInput userInput;
     private final Display display;
     private final Library library;
+    private final UserAccounts userAccount;
 
-    public Delegator(Menu menu, UserInput userInput, Display display, Library library) {
+    public Delegator(Menu menu, UserInput userInput, Display display, Library library, UserAccounts userAccounts) {
         this.menu = menu;
         this.userInput = userInput;
         this.display = display;
         this.library = library;
+        this.userAccount = userAccounts;
     }
 
     public void start() {
-        while(true) {
+        while (true) {
             processTheOption();
         }
     }
@@ -32,8 +34,13 @@ public class Delegator {
             String movieName = userInput.getInput();
             display.print(library.checkedOutMovie(movieName));
         } else if (input.equals("4")) {
-            display.print(library.listMovies());
-        }else if (input.equals("5")) {
+            String loginId = userInput.getInput();
+            String password = userInput.getInput();
+            if (userAccount.compare(loginId, password)){
+
+            }
+            display.print("Invalid User Name or Password!");
+        } else if (input.equals("5")) {
             System.exit(0);
         } else {
             display.print("Select a valid option!");
