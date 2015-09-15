@@ -27,8 +27,7 @@ public class Delegator {
         if (input.equals("1")) {
             display.print(library.toString());
         } else if (input.equals("2")) {
-            String bookName = userInput.getInput();
-            display.print(library.checkedOut(bookName));
+            display.print(library.listMovies());
         } else if (input.equals("3")) {
             String bookName = userInput.getInput();
             display.print(library.returnBook(bookName));
