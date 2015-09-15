@@ -12,6 +12,8 @@ public class User {
     }
 
     public boolean compare(String loginId, String password) {
+        if (this.loginId.equals(loginId) && this.password.equals(password))
+            return true;
         return false;
     }
 }
