@@ -12,4 +12,13 @@ public class Menu {
         }
         return output.substring(0, output.length() - 1);
     }
+
+    public String userOptions() {
+        String[] userOptions = {"List Books", "List Movies", "Checkout Movie", "Checkout Book", "Return Book", "Quit"};
+        String result = "";
+        for (int i = 0; i < userOptions.length; i++) {
+            result += (i + 1) + "." + userOptions[i] + "\n";
+        }
+        return result.substring(0,result.length()-1);
+    }
 }
