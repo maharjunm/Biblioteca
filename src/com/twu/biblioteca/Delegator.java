@@ -33,10 +33,7 @@ public class Delegator {
             display.print(library.checkedOutMovie(movieName));
         } else if (input.equals("4")) {
             display.print(library.listMovies());
-        } else if (input.equals("5")) {
-            String bookName = userInput.getInput();
-            display.print(library.checkedOutMovie(bookName));
-        } else if (input.equals("6")) {
+        }else if (input.equals("5")) {
             System.exit(0);
         } else {
             display.print("Select a valid option!");

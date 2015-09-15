@@ -126,7 +126,7 @@ public class DelegatorTest {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void shouldExitTheApplicationWhenWeChoose4() {
+    public void shouldExitTheApplicationWhenWeChoose5() {
         exit.expectSystemExit();
 
         Menu menu = mock(Menu.class);
@@ -135,7 +135,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
-        when(userInput.getInput()).thenReturn("6");
+        when(userInput.getInput()).thenReturn("5");
 
         delegator.processTheOption();
 
@@ -151,7 +151,7 @@ public class DelegatorTest {
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
-        when(userInput.getInput()).thenReturn("6");
+        when(userInput.getInput()).thenReturn("5");
 
         delegator.start();
 
