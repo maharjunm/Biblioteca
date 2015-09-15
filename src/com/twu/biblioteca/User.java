@@ -2,18 +2,16 @@
 package com.twu.biblioteca;
 
 public class User {
-    private String email;
-    private String name;
-    private String phoneNumber;
 
-    public User(String name, String email, String phoneNumber) {
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
+    private String password;
+    private String loginId;
+
+    public User(String loginId, String password) {
+        this.loginId = loginId;
+        this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return name + "\t" + email + "\t" + phoneNumber;
+    public boolean compare(String loginId, String password) {
+        return false;
     }
 }
