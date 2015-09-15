@@ -89,55 +89,20 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintThankYouMessageWhenWeWantToReturnAvailableBook() {
+    public void shouldCallTheCheckoutMovieFromTheLibraryWhenWeChoose3() {
         Menu menu = mock(Menu.class);
         Library library = mock(Library.class);
         Display display = mock(Display.class);
         UserInput userInput = mock(UserInput.class);
         Delegator delegator = new Delegator(menu, userInput, display, library);
 
-        when(userInput.getInput()).thenReturn("3").thenReturn("Head First Java");
-        library.checkedOut("Head First Java");
+        when(userInput.getInput()).thenReturn("3").thenReturn("Maharjun");
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
-        inOrder.verify(display, times(1)).print(library.returnBook(userInput.getInput()));
-    }
-
-    @Test
-    public void shouldCallTheListMoviesFromTheLibrary() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
-
-        when(userInput.getInput()).thenReturn("4");
-        delegator.processTheOption();
-
-        InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(menu.toString());
-        inOrder.verify(display, times(1)).print("Choose Any One Option :");
-        verify(library, times(1)).listMovies();
-    }
-
-    @Test
-    public void shouldCallTheCheckoutMovieFromTheLibrary() {
-        Menu menu = mock(Menu.class);
-        Library library = mock(Library.class);
-        Display display = mock(Display.class);
-        UserInput userInput = mock(UserInput.class);
-        Delegator delegator = new Delegator(menu, userInput, display, library);
-
-        when(userInput.getInput()).thenReturn("5").thenReturn("Maharjun");
-        delegator.processTheOption();
-
-        InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(menu.toString());
-        inOrder.verify(display, times(1)).print("Choose Any One Option :");
-        inOrder.verify(display, times(1)).print(library.checkedOutMovie(userInput.getInput()));
+        verify(library, times(1)).checkedOutMovie(userInput.getInput());
     }
 
     @Test

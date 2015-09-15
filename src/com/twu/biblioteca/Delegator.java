@@ -29,8 +29,8 @@ public class Delegator {
         } else if (input.equals("2")) {
             display.print(library.listMovies());
         } else if (input.equals("3")) {
-            String bookName = userInput.getInput();
-            display.print(library.returnBook(bookName));
+            String movieName = userInput.getInput();
+            display.print(library.checkedOutMovie(movieName));
         } else if (input.equals("4")) {
             display.print(library.listMovies());
         } else if (input.equals("5")) {
