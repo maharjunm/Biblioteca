@@ -34,16 +34,22 @@ public class Delegator {
             String movieName = userInput.getInput();
             display.print(library.checkedOutMovie(movieName));
         } else if (input.equals("4")) {
-            String loginId = userInput.getInput();
-            String password = userInput.getInput();
-            if (userAccount.compare(loginId, password)){
-
-            }
-            display.print("Invalid User Name or Password!");
+            processUserOption();
         } else if (input.equals("5")) {
             System.exit(0);
         } else {
             display.print("Select a valid option!");
+        }
+    }
+
+    private void processUserOption() {
+        String loginId = userInput.getInput();
+        String password = userInput.getInput();
+        if (userAccount.compare(loginId, password)){
+            String userOptions = menu.userOptions();
+            display.print(userOptions);
+        }else {
+            display.print("Invalid User Name or Password!");
         }
     }
 }
