@@ -11,41 +11,48 @@ public class AdminMenuTest {
     public void shouldReturnTheListBooksOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 
     @Test
     public void shouldReturnTheListMoviesOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 
     @Test
     public void shouldReturnTheCheckoutMovieOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 
     @Test
     public void shouldReturnTheCheckoutBookOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 
     @Test
     public void shouldReturnTheReturnBookOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 
     @Test
     public void shouldReturnTheCheckoutDetailsOption() {
         AdminMenu adminMenu = new AdminMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details",adminMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
+    }
+
+    @Test
+    public void shouldReturnTheLogoutOption() {
+        AdminMenu adminMenu = new AdminMenu();
+
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Checkout Details\n7.Logout",adminMenu.toString());
     }
 }
