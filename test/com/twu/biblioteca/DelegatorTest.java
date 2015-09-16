@@ -194,6 +194,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldAskTheReturnBookMessageWhenWeChoose5AfterUserLoggedIntoTheApplication() {
+        when(userInput.getInput()).thenReturn("5").thenReturn("Head First Java");
+        delegator.processUserOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.checkedOut("Head First Java"));
+    }
+
+    @Test
     public void shouldReturnTheAdminMenuOptionWhenAdminWantedToLoginIntoTheSystem() {
         Menu adminMenu = mock(AdminMenu.class);
 
