@@ -134,13 +134,23 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheListMoviessWhenWeChoose1AfterUserLoggedIntoTheApplication() {
+    public void shouldPrintTheListMoviesWhenWeChoose2AfterUserLoggedIntoTheApplication() {
 
         when(userInput.getInput()).thenReturn("2");
         delegator.processUserOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print(library.listMovies());
+    }
+
+    @Test
+    public void shouldAskTheInputWhenWeChoose3AfterUserLoggedIntoTheApplication() {
+
+        when(userInput.getInput()).thenReturn("3");
+        delegator.processUserOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(userInput, times(2)).getInput();
     }
 
     @Test
