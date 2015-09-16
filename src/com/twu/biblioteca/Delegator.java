@@ -73,6 +73,8 @@ public class Delegator {
             display.print(library.returnBook(bookName));
         } else if (input.equals("7")) {
             System.exit(0);
+        }else {
+            display.print("Select a valid option!");
         }
     }
 }

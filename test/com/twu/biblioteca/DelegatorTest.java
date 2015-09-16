@@ -204,6 +204,17 @@ public class DelegatorTest {
         verify(display).print(library.returnBook(userInput.getInput()));
     }
 
+    @Test
+    public void shouldPrintInvalidOptionWhenUserLoggedIntoTheApplication() {
+
+        when(userInput.getInput()).thenReturn("9");
+        delegator.processUserOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print("Select a valid option!");
+    }
+
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
