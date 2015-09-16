@@ -2,14 +2,14 @@
 package com.twu.biblioteca;
 
 public class Delegator {
-    private final Menu menu;
+    private final NormalMenu normalMenu;
     private final UserInput userInput;
     private final Display display;
     private final Library library;
     private final UserAccounts userAccount;
 
-    public Delegator(Menu menu, UserInput userInput, Display display, Library library, UserAccounts userAccounts) {
-        this.menu = menu;
+    public Delegator(NormalMenu normalMenu, UserInput userInput, Display display, Library library, UserAccounts userAccounts) {
+        this.normalMenu = normalMenu;
         this.userInput = userInput;
         this.display = display;
         this.library = library;
@@ -23,7 +23,7 @@ public class Delegator {
     }
 
     public void processTheOption() {
-        display.print(menu.toString());
+        display.print(normalMenu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
         if (input.equals("1")) {
@@ -45,12 +45,6 @@ public class Delegator {
     private void processUserOption() {
         String loginId = userInput.getInput();
         String password = userInput.getInput();
-        if (userAccount.compare(loginId, password)){
-            String userOptions = menu.userOptions();
-            display.print(userOptions);
-            display.print("Choose Any One Option :");
-        }else {
-            display.print("Invalid User Name or Password!");
-        }
+        display.print("Invalid User Name or Password!");
     }
 }
