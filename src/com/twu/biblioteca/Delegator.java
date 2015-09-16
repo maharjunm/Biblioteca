@@ -47,7 +47,10 @@ public class Delegator {
         String password = userInput.getInput();
         normalMenu = userAccount.compare(loginId, password);
         if (normalMenu instanceof UserMenu) {
-            display.print(normalMenu.toString());
+            while (true) {
+                display.print(normalMenu.toString());
+                processUserOption();
+            }
         } else if (normalMenu instanceof AdminMenu) {
             display.print(normalMenu.toString());
         } else {
@@ -73,7 +76,7 @@ public class Delegator {
             display.print(library.returnBook(bookName));
         } else if (input.equals("7")) {
             System.exit(0);
-        }else {
+        } else {
             display.print("Select a valid option!");
         }
     }
