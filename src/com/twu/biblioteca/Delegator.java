@@ -48,9 +48,9 @@ public class Delegator {
         normalMenu = userAccount.compare(loginId, password);
         if (normalMenu instanceof UserMenu) {
             display.print(normalMenu.toString());
-        }else if(normalMenu instanceof AdminMenu) {
+        } else if (normalMenu instanceof AdminMenu) {
             display.print(normalMenu.toString());
-        }else {
+        } else {
             display.print("Invalid User Name or Password!");
         }
     }
@@ -58,8 +58,10 @@ public class Delegator {
     public void processUserOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        if(input.equals("1")){
+        if (input.equals("1")) {
             display.print(library.toString());
+        } else if (input.equals("2")) {
+            display.print(library.listMovies());
         }
     }
 }
