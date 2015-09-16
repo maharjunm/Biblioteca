@@ -164,6 +164,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldAskTheInputWhenWeChoose4AfterUserLoggedIntoTheApplication() {
+
+        when(userInput.getInput()).thenReturn("4").thenReturn("Maharjun");
+        delegator.processUserOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(userInput, times(2)).getInput();
+    }
+
+    @Test
     public void shouldReturnTheAdminMenuOptionWhenAdminWantedToLoginIntoTheSystem() {
         Menu adminMenu = mock(AdminMenu.class);
 
