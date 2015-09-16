@@ -240,6 +240,18 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldRestartTheApplicationWhenWeChoose6FromTheWhileLoopWhenUserLoggedIntoTheSystem() {
+        exit.expectSystemExit();
+        Menu menu = new UserMenu();
+
+        when(userInput.getInput()).thenReturn("B09-1894").thenReturn("B091894").thenReturn("7").thenReturn("5");
+        when(userAccounts.compare("B09-1894","B091894")).thenReturn(menu);
+
+        delegator.userOption();
+
+    }
+
+    @Test
     public void shouldReturnTheAdminMenuOptionWhenAdminWantedToLoginIntoTheSystem() {
         Menu adminMenu = mock(AdminMenu.class);
 

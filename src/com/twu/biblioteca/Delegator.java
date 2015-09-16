@@ -74,6 +74,8 @@ public class Delegator {
         } else if (input.equals("5")) {
             String bookName = userInput.getInput();
             display.print(library.returnBook(bookName));
+        } else if (input.equals("6")) {
+            start();
         } else if (input.equals("7")) {
             System.exit(0);
         } else {
