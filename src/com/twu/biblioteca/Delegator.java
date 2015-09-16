@@ -2,13 +2,13 @@
 package com.twu.biblioteca;
 
 public class Delegator {
-    private final NormalMenu normalMenu;
+    private Menu normalMenu;
     private final UserInput userInput;
     private final Display display;
     private final Library library;
     private final UserAccounts userAccount;
 
-    public Delegator(NormalMenu normalMenu, UserInput userInput, Display display, Library library, UserAccounts userAccounts) {
+    public Delegator(Menu normalMenu, UserInput userInput, Display display, Library library, UserAccounts userAccounts) {
         this.normalMenu = normalMenu;
         this.userInput = userInput;
         this.display = display;
@@ -42,9 +42,11 @@ public class Delegator {
         }
     }
 
-    private void processUserOption() {
+    public void processUserOption() {
         String loginId = userInput.getInput();
         String password = userInput.getInput();
+        normalMenu = userAccount.compare(loginId, password);
+        display.print(normalMenu.toString());
         display.print("Invalid User Name or Password!");
     }
 }

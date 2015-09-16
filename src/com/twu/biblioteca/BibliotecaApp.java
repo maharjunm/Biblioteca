@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
-
     private final Delegator delegator;
     private final Display display;
 
@@ -22,9 +21,9 @@ public class BibliotecaApp {
         Scanner scanner = new Scanner(System.in);
         UserInput userInput = new UserInput(scanner);
         UserAccounts userAccounts = new UserAccounts();
-        Menu menu = new Menu();
+        NormalMenu normalMenu = new NormalMenu();
 
-        Delegator delegator = new Delegator(menu, userInput, display, library, userAccounts);
+        Delegator delegator = new Delegator(normalMenu, userInput, display, library, userAccounts);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(delegator, display);
         bibliotecaApp.start();
     }
