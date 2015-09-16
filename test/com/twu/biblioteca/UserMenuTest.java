@@ -10,6 +10,13 @@ public class UserMenuTest {
     public void shouldReturnTheListBooksOption(){
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies",userMenu.toString());
+    }
+
+    @Test
+    public void shouldReturnTheListMoviesOption(){
+        UserMenu userMenu = new UserMenu();
+
+        assertEquals("1.List Books\n2.List Movies",userMenu.toString());
     }
 }
