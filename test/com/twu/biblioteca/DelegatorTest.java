@@ -104,7 +104,6 @@ public class DelegatorTest {
         delegator.userOption();
 
         verify(display, times(1)).print(userMenu.toString());
-
     }
 
     @Test
@@ -113,7 +112,6 @@ public class DelegatorTest {
         delegator.processUserOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
-
     }
 
     @Test
@@ -123,7 +121,16 @@ public class DelegatorTest {
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(userInput, times(1)).getInput();
+    }
 
+    @Test
+    public void shouldPrintTheListBooksWhenWeChoose1AfterUserLoggedIntoTheApplication() {
+
+        when(userInput.getInput()).thenReturn("1");
+        delegator.processUserOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.toString());
     }
 
     @Test
@@ -135,7 +142,6 @@ public class DelegatorTest {
         delegator.userOption();
 
         verify(display, times(1)).print(adminMenu.toString());
-
     }
 
     @Test

@@ -58,5 +58,8 @@ public class Delegator {
     public void processUserOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
+        if(input.equals("1")){
+            display.print(library.toString());
+        }
     }
 }
