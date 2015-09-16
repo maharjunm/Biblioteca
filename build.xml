@@ -22,7 +22,7 @@
         <delete file="cobertura.ser"/>
     </target>
 
-    <target name="compile">
+    <target name="compile" depends="clean">
         <mkdir dir="out"/>
         <mkdir dir="instrumented"/>
         <mkdir dir="reports"/>
@@ -51,7 +51,7 @@
         </cobertura-instrument>
     </target>
 
-    <target name="run">
+    <target name="run" depends="instrument">
         <junit printsummary="yes" outputtoformatters="true">
             <classpath location="./instrumented"/>
             <classpath location="lib/junit-4.11.jar"/>
@@ -74,7 +74,7 @@
             <report format="frames" todir="reports"/>
         </junitreport>
     </target>
-    <target name="coverage-report">
+    <target name="coverage-report" depends="run">
         <cobertura-report srcdir="src" destdir="reports" format="xml" />
     </target>
 

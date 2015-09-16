@@ -11,7 +11,15 @@ public class UserAccounts {
     }};
 
     public Menu compare(String loginId, String password) {
-        Menu menu;
+        Menu menu = null;
+        for (int i = 0; i < users.size(); i++) {
+            User thisUser = (User) users.get(i);
+            if (thisUser.compare(loginId, password)) {
+                if (thisUser.getRole().equals("User"))
+                    menu = new UserMenu();
+                return menu;
+            }
+        }
         menu = new NormalMenu();
         return menu;
     }
