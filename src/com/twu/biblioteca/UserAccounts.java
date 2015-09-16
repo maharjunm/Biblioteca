@@ -23,7 +23,7 @@ public class UserAccounts {
                 return menu;
             }
         }
-        menu = new NormalMenu();
+        menu = new GuestMenu();
         return menu;
     }
 }

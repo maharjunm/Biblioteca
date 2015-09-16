@@ -9,12 +9,12 @@ import static org.mockito.Mockito.*;
 
 public class DelegatorTest {
 
-    Menu guestMenu = mock(Menu.class);
+    Menu menu = mock(Menu.class);
     Library library = mock(Library.class);
     Display display = mock(Display.class);
     UserInput userInput = mock(UserInput.class);
     UserAccounts userAccounts = mock(UserAccounts.class);
-    Delegator delegator = new Delegator(guestMenu, userInput, display, library, userAccounts);
+    Delegator delegator = new Delegator(menu, userInput, display, library, userAccounts);
 
     @Test
     public void shouldPrintOptions() {
@@ -23,7 +23,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
     }
 
     @Test
@@ -33,7 +33,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
     }
 
@@ -54,7 +54,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         inOrder.verify(display, times(1)).print(library.toString());
     }
@@ -66,7 +66,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         verify(library, times(1)).listMovies();
     }
@@ -78,7 +78,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         verify(library, times(1)).checkedOutMovie(userInput.getInput());
     }
@@ -90,7 +90,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         inOrder.verify(display, times(1)).print("Invalid User Name or Password!");
     }
@@ -126,7 +126,7 @@ public class DelegatorTest {
         delegator.processTheOption();
 
         InOrder inOrder = inOrder(display);
-        inOrder.verify(display, times(1)).print(guestMenu.toString());
+        inOrder.verify(display, times(1)).print(menu.toString());
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         inOrder.verify(display, times(1)).print("Select a valid option!");
     }

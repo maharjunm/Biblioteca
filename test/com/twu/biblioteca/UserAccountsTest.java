@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -8,15 +7,15 @@ import static org.junit.Assert.*;
 public class UserAccountsTest {
 
     @Test
-    public void shouldReturnTheNormalMenuWhenUserNameAndPassWordsAreNotMatchedWIthTheList() {
+    public void shouldReturnTheGuestMenuWhenUserNameAndPassWordsAreNotMatchedWIthTheList() {
         UserAccounts userAccounts = new UserAccounts();
-        Menu menu = new NormalMenu();
+        Menu menu = new GuestMenu();
 
         assertEquals(userAccounts.compare("Maharjun", "Maharjun").toString(), menu.toString());
     }
 
     @Test
-    public void shouldReturnTheNormalMenuWhenUserNameAndPassWordsAreMatchedWIthTheListAndTheRoleIsUser() {
+    public void shouldReturnTheUserMenuWhenUserNameAndPassWordsAreMatchedWIthTheListAndTheRoleIsUser() {
         UserAccounts userAccounts = new UserAccounts();
         Menu menu = new UserMenu();
 
@@ -24,7 +23,7 @@ public class UserAccountsTest {
     }
 
     @Test
-    public void shouldReturnTheNormalMenuWhenUserNameAndPassWordsAreMatchedWIthTheListAndTheRoleIsAdmin() {
+    public void shouldReturnTheAdminMenuWhenUserNameAndPassWordsAreMatchedWIthTheListAndTheRoleIsAdmin() {
         UserAccounts userAccounts = new UserAccounts();
         Menu menu = new AdminMenu();
 

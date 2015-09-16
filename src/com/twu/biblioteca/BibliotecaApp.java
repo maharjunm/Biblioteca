@@ -21,9 +21,9 @@ public class BibliotecaApp {
         Scanner scanner = new Scanner(System.in);
         UserInput userInput = new UserInput(scanner);
         UserAccounts userAccounts = new UserAccounts();
-        NormalMenu normalMenu = new NormalMenu();
+        GuestMenu guestMenu = new GuestMenu();
 
-        Delegator delegator = new Delegator(normalMenu, userInput, display, library, userAccounts);
+        Delegator delegator = new Delegator(guestMenu, userInput, display, library, userAccounts);
         BibliotecaApp bibliotecaApp = new BibliotecaApp(delegator, display);
         bibliotecaApp.start();
     }
