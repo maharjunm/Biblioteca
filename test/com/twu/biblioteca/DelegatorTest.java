@@ -97,7 +97,7 @@ public class DelegatorTest {
 
     @Test
     public void shouldReturnTheUserMenuOptionWhenUserWantedToLoginIntoTheSystem() {
-        Menu userMenu =mock(UserMenu.class);
+        Menu userMenu = mock(UserMenu.class);
 
         when(userInput.getInput()).thenReturn("B09-1894").thenReturn("B091894");
         when(userAccounts.compare("B09-1894", "B091894")).thenReturn(userMenu);
@@ -117,8 +117,18 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldGetTheInputFromTheUserAfterUserLoggedIntoTheApplication() {
+
+        delegator.processUserOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(userInput, times(1)).getInput();
+
+    }
+
+    @Test
     public void shouldReturnTheAdminMenuOptionWhenAdminWantedToLoginIntoTheSystem() {
-        Menu adminMenu =mock(AdminMenu.class);
+        Menu adminMenu = mock(AdminMenu.class);
 
         when(userInput.getInput()).thenReturn("B09-1893").thenReturn("B091893");
         when(userAccounts.compare("B09-1893", "B091893")).thenReturn(adminMenu);
