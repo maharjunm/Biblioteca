@@ -160,7 +160,7 @@ public class DelegatorTest {
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
-        inOrder.verify(display, times(1)).print(library.checkedOut("PK"));
+        inOrder.verify(display, times(1)).print(library.checkedOutMovie("PK"));
     }
 
     @Test
@@ -171,6 +171,16 @@ public class DelegatorTest {
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(userInput, times(2)).getInput();
+    }
+
+    @Test
+    public void shouldAskTheCheckoutBookMessageWhenWeChoose4AfterUserLoggedIntoTheApplication() {
+        when(userInput.getInput()).thenReturn("4").thenReturn("Head First Java");
+        delegator.processUserOption();
+
+        InOrder inOrder = inOrder(display);
+        inOrder.verify(display, times(1)).print("Choose Any One Option :");
+        inOrder.verify(display, times(1)).print(library.checkedOut("Head First Java"));
     }
 
     @Test
