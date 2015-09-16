@@ -249,6 +249,8 @@ public class DelegatorTest {
 
         delegator.userOption();
 
+        verify(display,times(1)).print(menu.toString());
+
     }
 
     @Test

@@ -34,7 +34,7 @@ public class Delegator {
             String movieName = userInput.getInput();
             display.print(library.checkedOutMovie(movieName));
         } else if (input.equals("4")) {
-            processUserOption();
+            userOption();
         } else if (input.equals("5")) {
             System.exit(0);
         } else {
@@ -75,6 +75,7 @@ public class Delegator {
             String bookName = userInput.getInput();
             display.print(library.returnBook(bookName));
         } else if (input.equals("6")) {
+            normalMenu = new GuestMenu();
             start();
         } else if (input.equals("7")) {
             System.exit(0);
