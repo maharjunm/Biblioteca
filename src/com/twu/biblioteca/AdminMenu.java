@@ -2,7 +2,7 @@ package com.twu.biblioteca;
 
 public class AdminMenu {
 
-    String[] options = {"List Books"};
+    String[] options = {"List Books", "List Movies"};
 
     @Override
     public String toString() {
