@@ -101,9 +101,18 @@ public class DelegatorTest {
 
         when(userInput.getInput()).thenReturn("B09-1894").thenReturn("B091894");
         when(userAccounts.compare("B09-1894", "B091894")).thenReturn(userMenu);
-        delegator.processUserOption();
+        delegator.userOption();
 
         verify(display, times(1)).print(userMenu.toString());
+
+    }
+
+    @Test
+    public void shouldReturnChooseAnyOneOptionMessage() {
+
+        delegator.processUserOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
 
     }
 
@@ -113,7 +122,7 @@ public class DelegatorTest {
 
         when(userInput.getInput()).thenReturn("B09-1893").thenReturn("B091893");
         when(userAccounts.compare("B09-1893", "B091893")).thenReturn(adminMenu);
-        delegator.processUserOption();
+        delegator.userOption();
 
         verify(display, times(1)).print(adminMenu.toString());
 

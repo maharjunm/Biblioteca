@@ -42,7 +42,7 @@ public class Delegator {
         }
     }
 
-    public void processUserOption() {
+    public void userOption() {
         String loginId = userInput.getInput();
         String password = userInput.getInput();
         normalMenu = userAccount.compare(loginId, password);
@@ -53,5 +53,9 @@ public class Delegator {
         }else {
             display.print("Invalid User Name or Password!");
         }
+    }
+
+    public void processUserOption() {
+        display.print("Choose Any One Option :");
     }
 }
