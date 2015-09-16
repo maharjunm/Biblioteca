@@ -33,11 +33,4 @@ public class NormalMenuTest {
 
         assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Login\n5.Quit", normalMenu.toString());
     }
-
-    @Test
-    public void shouldReturnRTheUserOptions() {
-        NormalMenu normalMenu = new NormalMenu();
-
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Quit", normalMenu.userOptions());
-    }
 }
