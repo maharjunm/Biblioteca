@@ -116,7 +116,7 @@ public class DelegatorTest {
 
     @Test
     public void shouldGetTheInputFromTheUserAfterUserLoggedIntoTheApplication() {
-
+        when(userInput.getInput()).thenReturn("1");
         delegator.processUserOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
@@ -200,7 +200,20 @@ public class DelegatorTest {
 
         InOrder inOrder = inOrder(display);
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
-        inOrder.verify(display, times(1)).print(library.checkedOut("Head First Java"));
+        verify(userInput, times(2)).getInput();
+        verify(display).print(library.returnBook(userInput.getInput()));
+    }
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+
+    @Test
+    public void shouldExitTheApplicationWhenWeChoose7WhenUserLoggedIntoTheSystem() {
+        exit.expectSystemExit();
+
+        when(userInput.getInput()).thenReturn("7");
+
+        delegator.processUserOption();
     }
 
     @Test
@@ -225,9 +238,6 @@ public class DelegatorTest {
         inOrder.verify(display, times(1)).print("Choose Any One Option :");
         inOrder.verify(display, times(1)).print("Select a valid option!");
     }
-
-    @Rule
-    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
     public void shouldExitTheApplicationWhenWeChoose5() {
