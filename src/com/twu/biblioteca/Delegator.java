@@ -68,6 +68,8 @@ public class Delegator {
         } else if (input.equals("4")) {
             String bookName = userInput.getInput();
             display.print(library.checkedOut(bookName));
+        } else if (input.equals("5")) {
+            String bookName = userInput.getInput();
         }
     }
 }
