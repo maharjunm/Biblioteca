@@ -108,6 +108,18 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldReturnTheAdminMenuOptionWhenAdminWantedToLoginIntoTheSystem() {
+        Menu adminMenu =mock(AdminMenu.class);
+
+        when(userInput.getInput()).thenReturn("B09-1893").thenReturn("B091893");
+        when(userAccounts.compare("B09-1893", "B091893")).thenReturn(adminMenu);
+        delegator.processUserOption();
+
+        verify(display, times(1)).print(adminMenu.toString());
+
+    }
+
+    @Test
     public void shouldPrintInvalidOptionWhenWeChooseInvalidOption() {
 
         when(userInput.getInput()).thenReturn("7");

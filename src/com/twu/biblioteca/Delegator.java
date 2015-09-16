@@ -46,7 +46,12 @@ public class Delegator {
         String loginId = userInput.getInput();
         String password = userInput.getInput();
         normalMenu = userAccount.compare(loginId, password);
-        display.print(normalMenu.toString());
-        display.print("Invalid User Name or Password!");
+        if (normalMenu instanceof UserMenu) {
+            display.print(normalMenu.toString());
+        }else if(normalMenu instanceof AdminMenu) {
+            display.print(normalMenu.toString());
+        }else {
+            display.print("Invalid User Name or Password!");
+        }
     }
 }
