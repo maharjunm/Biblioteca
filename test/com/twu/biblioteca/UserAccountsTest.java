@@ -8,18 +8,11 @@ import static org.junit.Assert.*;
 public class UserAccountsTest {
 
     @Test
-    public void shouldReturnTheMenuWhenUserNameAndPassWordsAreEqual() {
+    public void shouldReturnTheNormalMenuWhenUserNameAndPassWordsAreNotMatchedWIthTheList() {
         UserAccounts userAccounts = new UserAccounts();
+        Menu menu = new NormalMenu();
 
-        assertTrue(userAccounts.compare("B09-1893","B091893"));
+        assertEquals(userAccounts.compare("Maharjun", "Maharjun").toString(), menu.toString());
 
-    }
-
-    @Test
-    public void shouldCallTheAdminMenuWhenUserTypeIsAdmin() {
-        UserAccounts userAccounts = new UserAccounts();
-        AdminMenu adminMenu = new AdminMenu();
-
-        assertEquals(userAccounts.getCorrectMenu().toString(),adminMenu.toString());
     }
 }

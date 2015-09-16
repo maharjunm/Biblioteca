@@ -1,7 +1,7 @@
 // Menu has some options and it will return that options
 package com.twu.biblioteca;
 
-public class NormalMenu {
+public class NormalMenu implements Menu {
     private String[] options = {"List Books", "List Movies", "Checkout Movie", "Login", "Quit"};
 
     @Override

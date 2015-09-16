@@ -10,17 +10,9 @@ public class UserAccounts {
         add(new User("B09-1895", "B091895", "User"));
     }};
 
-    public boolean compare(String loginId, String password) {
-        for (int i = 0; i < users.size(); i++) {
-            User thisUser = (User) users.get(i);
-            if (thisUser.compare(loginId, password))
-                return true;
-        }
-        return false;
-    }
-
-    public Menu getCorrectMenu() {
-        Menu menu = new AdminMenu();
+    public Menu compare(String loginId, String password) {
+        Menu menu;
+        menu = new NormalMenu();
         return menu;
     }
 }

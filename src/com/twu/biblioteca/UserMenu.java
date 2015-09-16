@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class UserMenu {
+public class UserMenu implements Menu {
 
     String[] options = {"List Books", "List Movies", "Checkout Movie", "Checkout Book", "Return Book", "Logout", "Quit"};
 
