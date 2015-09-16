@@ -22,4 +22,12 @@ public class UserAccountsTest {
 
         assertEquals(userAccounts.compare("B09-1894", "B091894").toString(), menu.toString());
     }
+
+    @Test
+    public void shouldReturnTheNormalMenuWhenUserNameAndPassWordsAreMatchedWIthTheListAndTheRoleIsAdmin() {
+        UserAccounts userAccounts = new UserAccounts();
+        Menu menu = new AdminMenu();
+
+        assertEquals(userAccounts.compare("B09-1893", "B091893").toString(), menu.toString());
+    }
 }

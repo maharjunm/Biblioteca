@@ -15,8 +15,11 @@ public class UserAccounts {
         for (int i = 0; i < users.size(); i++) {
             User thisUser = (User) users.get(i);
             if (thisUser.compare(loginId, password)) {
-                if (thisUser.getRole().equals("User"))
+                if (thisUser.getRole().equals("User")) {
                     menu = new UserMenu();
+                    return menu;
+                }
+                menu = new AdminMenu();
                 return menu;
             }
         }
