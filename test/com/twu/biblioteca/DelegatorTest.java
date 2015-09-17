@@ -122,6 +122,16 @@ public class DelegatorTest {
         verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print("Select a valid option!");
     }
+    @Test
+    public void shouldRestartTheApplicationWhenWeChoose6FromTheWhileLoopWheadminLoggedIntoTheSystem() {
+        exit.expectSystemExit();
+        Menu menu = new AdminMenu();
+
+        when(userInput.getInput()).thenReturn("7").thenReturn("5");
+        when(userAccounts.compare("B09-1893", "B091893")).thenReturn(menu);
+
+        delegator.adminOption();
+    }
 
     @Test
     public void shouldExitFromTheApplicationWhenAdminChooses8() {
