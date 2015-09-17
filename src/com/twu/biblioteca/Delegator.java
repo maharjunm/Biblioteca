@@ -52,7 +52,10 @@ public class Delegator {
                 processUserOption();
             }
         } else if (normalMenu instanceof AdminMenu) {
-            display.print(normalMenu.toString());
+            while (true) {
+                display.print(normalMenu.toString());
+                adminOption();
+            }
         } else {
             display.print("Invalid User Name or Password!");
         }
