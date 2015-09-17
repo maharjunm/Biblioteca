@@ -3,13 +3,14 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 public class Library {
 
     private ArrayList books = new ArrayList<Book>() {{
         add(new Book("Head First Java", "Bert Bates", 2009));
     }};
-    private HashMap<User, Book> checkedOutBooks = new HashMap<>();
+    private HashMap<Book, User> checkedOutBooks = new HashMap<>();
     private ArrayList movies = new ArrayList<Movie>() {{
         add(new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5));
         add(new Movie("PK", 2014, "Rajkumar Hirani", 8.3));
@@ -31,7 +32,7 @@ public class Library {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
             if (thisBook.searchByname(thatBookName)) {
-                checkedOutBooks.put(user, (Book) books.get(i));
+                checkedOutBooks.put((Book) books.get(i), user);
                 books.remove(i);
                 return "Thank you! Enjoy the book";
             }
@@ -40,14 +41,14 @@ public class Library {
     }
 
     public String returnBook(String bookName) {
-        for (int i = 0; i < checkedOutBooks.size(); i++) {
-            Book thisBook = (Book) checkedOutBooks.get(i);
+        Set<Book> books = checkedOutBooks.keySet();
+        for (Book thisBook : books) {
             if (thisBook.searchByname(bookName)) {
-                books.add(checkedOutBooks.get(i));
-                checkedOutBooks.remove(i);
+                checkedOutBooks.remove(thisBook);
                 return "Thank you for returning the book.";
             }
         }
+
         return "That is not a valid book to return.";
     }
 
