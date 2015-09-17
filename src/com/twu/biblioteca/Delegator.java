@@ -87,9 +87,13 @@ public class Delegator {
     public void adminOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        switch (input){
-            case "1" :
+        switch (input) {
+            case "1":
                 display.print(library.toString());
+                break;
+            case "2":
+                display.print(library.listMovies());
+                break;
         }
     }
 }

@@ -53,13 +53,23 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheListWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheListBooksWhenAdminLoggedIntoTheSystem() {
 
         when(userInput.getInput()).thenReturn("1");
         delegator.adminOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print(library.toString());
+    }
+
+    @Test
+    public void shouldPrintTheListMoviesWhenAdminLoggedIntoTheSystem() {
+
+        when(userInput.getInput()).thenReturn("2");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.listMovies());
     }
 
     @Test
