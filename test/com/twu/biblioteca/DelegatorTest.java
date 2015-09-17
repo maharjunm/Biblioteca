@@ -44,11 +44,12 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldReturnTheChooseAnyOneOptionMessageWhenAdminLoggedIntoTheSystem() {
+    public void shouldAskTheInputFromTheAdminWhenAdminLoggedIntoTheSystem() {
 
         delegator.adminOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
+        verify(userInput, times(1)).getInput();
     }
 
     @Test

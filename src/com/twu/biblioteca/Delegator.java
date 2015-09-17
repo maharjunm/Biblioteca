@@ -86,5 +86,6 @@ public class Delegator {
 
     public void adminOption() {
         display.print("Choose Any One Option :");
+        String input = userInput.getInput();
     }
 }
