@@ -72,4 +72,13 @@ public class LibraryTest {
         String line = "--------------------------------------------------------------------";
         assertEquals(library.checkedOutList(), line + "\n" + header + "\n" + line);
     }
+
+    @Test
+    public void shouldReturnTheCheckoutListValuesWhenBooksAreAvialable() {
+        Library library = new Library();
+        library.checkedOut("Head First Java", user);
+        String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
+        String line = "--------------------------------------------------------------------";
+        assertEquals(library.checkedOutList(), line + "\n" + header + "\n" + line + "\n" + format + "\t" + user.toString());
+    }
 }

@@ -84,7 +84,7 @@ public class Library {
         String output = line + "\n" + header + "\n" + line + "\n";
         Set<Book> books = checkedOutBooks.keySet();
         for (Book book : books) {
-            output += book + "" + checkedOutBooks.get(book) +"\n";
+            output += book + "\t" + checkedOutBooks.get(book) +"\n";
         }
         return output.substring(0, output.length() - 1);
     }
