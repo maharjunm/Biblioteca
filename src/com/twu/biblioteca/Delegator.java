@@ -111,6 +111,8 @@ public class Delegator {
                 break;
             case "8":
                 System.exit(0);
+            default:
+                display.print("Select a valid option!");
 
         }
     }

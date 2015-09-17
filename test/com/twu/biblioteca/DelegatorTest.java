@@ -114,6 +114,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheCheckoutListWhenAdminChoosesGraterThan8() {
+
+        when(userInput.getInput()).thenReturn("9");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print("Select a valid option!");
+    }
+
+    @Test
     public void shouldExitFromTheApplicationWhenAdminChooses8() {
         exit.expectSystemExit();
 
