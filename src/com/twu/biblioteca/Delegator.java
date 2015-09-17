@@ -94,6 +94,10 @@ public class Delegator {
             case "2":
                 display.print(library.listMovies());
                 break;
+            case "3":
+                String movieName = userInput.getInput();
+                display.print(library.checkedOutMovie(movieName));
+                break;
         }
     }
 }

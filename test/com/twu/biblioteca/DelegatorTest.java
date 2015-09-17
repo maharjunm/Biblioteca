@@ -73,6 +73,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheCheckoutMessageWhenAdminLoggedIntoTheSystem() {
+
+        when(userInput.getInput()).thenReturn("3").thenReturn("PK");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.checkedOut("PK"));
+    }
+
+    @Test
     public void shouldExitTheApplicationWhenWeChoose5FromTheWhileLoop() {
 
         exit.expectSystemExit();
