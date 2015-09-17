@@ -109,6 +109,8 @@ public class Delegator {
             case "6":
                 display.print(library.checkedOutList());
                 break;
+            case "8":
+                System.exit(0);
 
         }
     }

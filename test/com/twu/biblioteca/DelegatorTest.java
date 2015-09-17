@@ -114,6 +114,14 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldExitFromTheApplicationWhenAdminChooses8() {
+        exit.expectSystemExit();
+
+        when(userInput.getInput()).thenReturn("8");
+        delegator.adminOption();
+    }
+
+    @Test
     public void shouldExitTheApplicationWhenWeChoose5FromTheWhileLoop() {
 
         exit.expectSystemExit();
