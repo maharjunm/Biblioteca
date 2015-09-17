@@ -62,13 +62,23 @@ public class LibraryTest {
     public void shouldReturnTheInvalidMessageWhenWeWantCheckOutInvalidMovie() {
         Library library = new Library();
 
-        assertEquals(library.checkedOutMovie("Maharjun"),"That movie is not available.");
+        assertEquals(library.checkedOutMovie("Maharjun"), "That movie is not available.");
     }
 
     @Test
     public void shouldReturnTheThankYouWhenWeWantCheckOutValidMovie() {
         Library library = new Library();
 
-        assertEquals(library.checkedOutMovie("3 Idiots"),"Thank you! Enjoy the movie");
+        assertEquals(library.checkedOutMovie("3 Idiots"), "Thank you! Enjoy the movie");
+    }
+
+    @Test
+    public void shouldReturnTheCheckListList() {
+        Library library = new Library();
+        String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
+        String line = "--------------------------------------------------------------------";
+        library.checkedOut("Head First Java");
+
+        assertEquals(library.checkedOutList(), line + "\n" + header + "\n" + line + "\n" + format);
     }
 }

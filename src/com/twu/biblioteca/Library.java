@@ -51,6 +51,7 @@ public class Library {
     }
 
     public String listMovies() {
+
         String result = "";
         String line = "---------------------------------------------------------------------------------";
         String header = String.format("%-20S%-20S%-20S%-20S", "Movie Name", "Year It Released ", "Direactor", "Rating of The Movie");
@@ -58,7 +59,7 @@ public class Library {
         for (int i = 0; i < movies.size(); i++) {
             result += movies.get(i) + "\n";
         }
-        return result.substring(0,result.length()-1);
+        return result.substring(0, result.length() - 1);
 
     }
 
@@ -72,5 +73,15 @@ public class Library {
             }
         }
         return "That movie is not available.";
+    }
+
+    public String checkedOutList() {
+        String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
+        String line = "--------------------------------------------------------------------";
+        String output = line + "\n" + header + "\n" + line + "\n";
+        for (int i = 0; i < checkedOutBooks.size(); i++) {
+            output += checkedOutBooks.get(i) + "\n";
+        }
+        return output.substring(0, output.length() - 1);
     }
 }
