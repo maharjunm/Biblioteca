@@ -44,7 +44,7 @@ public class Library {
         Set<Book> books = checkedOutBooks.keySet();
         for (Book thisBook : books) {
             if (thisBook.searchByname(bookName)) {
-                books.add(thisBook);
+                this.books.add(thisBook);
                 checkedOutBooks.remove(thisBook);
                 return "Thank you for returning the book.";
             }
