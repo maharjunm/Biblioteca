@@ -82,8 +82,9 @@ public class Library {
         String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
         String line = "--------------------------------------------------------------------";
         String output = line + "\n" + header + "\n" + line + "\n";
-        for (int i = 0; i < checkedOutBooks.size(); i++) {
-            output += checkedOutBooks.get(i) + "\n";
+        Set<Book> books = checkedOutBooks.keySet();
+        for (Book book : books) {
+            output += book + "" + checkedOutBooks.get(book) +"\n";
         }
         return output.substring(0, output.length() - 1);
     }

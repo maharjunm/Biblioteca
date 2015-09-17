@@ -64,4 +64,12 @@ public class LibraryTest {
 
         assertEquals(library.checkedOutMovie("3 Idiots"), "Thank you! Enjoy the movie");
     }
+
+    @Test
+    public void shouldReturnTheCheckoutList() {
+        Library library = new Library();
+        String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
+        String line = "--------------------------------------------------------------------";
+        assertEquals(library.checkedOutList(), line + "\n" + header + "\n" + line);
+    }
 }
