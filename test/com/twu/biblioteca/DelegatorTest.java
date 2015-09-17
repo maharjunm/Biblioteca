@@ -94,6 +94,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheReturnBookMessageWhenAdminLoggedIntoTheSystem() {
+
+        when(userInput.getInput()).thenReturn("5").thenReturn("Head First Java");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.returnBook("Head First Java"));
+    }
+
+    @Test
     public void shouldExitTheApplicationWhenWeChoose5FromTheWhileLoop() {
 
         exit.expectSystemExit();

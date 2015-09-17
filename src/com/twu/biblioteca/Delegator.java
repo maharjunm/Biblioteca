@@ -102,6 +102,11 @@ public class Delegator {
                 String bookName = userInput.getInput();
                 display.print(library.checkedOut(bookName));
                 break;
+            case "5":
+                String thatBookName = userInput.getInput();
+                display.print(library.returnBook(thatBookName));
+                break;
+
         }
     }
 }
