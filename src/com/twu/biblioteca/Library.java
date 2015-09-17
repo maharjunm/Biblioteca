@@ -2,13 +2,14 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 
     private ArrayList books = new ArrayList<Book>() {{
         add(new Book("Head First Java", "Bert Bates", 2009));
     }};
-    private ArrayList checkedOutBooks = new ArrayList<Book>();
+    private HashMap<User, Book> checkedOutBooks = new HashMap<>();
     private ArrayList movies = new ArrayList<Movie>() {{
         add(new Movie("3 Idiots", 2009, "Rajkumar Hirani", 8.5));
         add(new Movie("PK", 2014, "Rajkumar Hirani", 8.3));
@@ -26,11 +27,11 @@ public class Library {
         return output.substring(0, output.length() - 1);
     }
 
-    public String checkedOut(String thatBookName) {
+    public String checkedOut(String thatBookName, User user) {
         for (int i = 0; i < books.size(); i++) {
             Book thisBook = (Book) books.get(i);
             if (thisBook.searchByname(thatBookName)) {
-                checkedOutBooks.add(books.get(i));
+                checkedOutBooks.put(user, (Book) books.get(i));
                 books.remove(i);
                 return "Thank you! Enjoy the book";
             }

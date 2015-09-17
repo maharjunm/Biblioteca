@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -18,18 +17,20 @@ public class LibraryTest {
         assertEquals(line + "\n" + header + "\n" + line + "\n" + format, library.toString());
     }
 
+    User user = new User("B09-1893", "B091893", "Librarian", "Maharjun", "maharjun123@gmail.com", "8498984842");
+
     @Test
     public void shouldReturnTheThankYouWhenChooseAvailableBook() {
         Library library = new Library();
 
-        assertEquals("Thank you! Enjoy the book", library.checkedOut("Head First Java"));
+        assertEquals("Thank you! Enjoy the book", library.checkedOut("Head First Java", user));
     }
 
     @Test
     public void shouldReturnTheInvalidMessageWhenChooseUnavailableBook() {
         Library library = new Library();
 
-        assertEquals("That book is not available.", library.checkedOut("Maharjun"));
+        assertEquals("That book is not available.", library.checkedOut("Maharjun", user));
     }
 
     @Test
@@ -37,14 +38,6 @@ public class LibraryTest {
         Library library = new Library();
 
         assertEquals("That is not a valid book to return.", library.returnBook("Maharjun"));
-    }
-
-    @Test
-    public void shouldReturnTheThankYouMessageWhenWeWantToReturnValidBook() {
-        Library library = new Library();
-        library.checkedOut("Head First Java");
-
-        assertEquals("Thank you for returning the book.", library.returnBook("Head First Java"));
     }
 
     @Test
@@ -70,15 +63,5 @@ public class LibraryTest {
         Library library = new Library();
 
         assertEquals(library.checkedOutMovie("3 Idiots"), "Thank you! Enjoy the movie");
-    }
-
-    @Test
-    public void shouldReturnTheCheckListList() {
-        Library library = new Library();
-        String header = String.format("%-20S%-20S%-20S", "Book Name", "Author Name", "Year Published");
-        String line = "--------------------------------------------------------------------";
-        library.checkedOut("Head First Java");
-
-        assertEquals(library.checkedOutList(), line + "\n" + header + "\n" + line + "\n" + format);
     }
 }
