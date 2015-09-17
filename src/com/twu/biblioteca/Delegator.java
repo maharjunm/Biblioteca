@@ -22,7 +22,7 @@ public class Delegator {
         }
     }
 
-    public void processTheOption() {
+    private void processTheOption() {
         display.print(normalMenu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
