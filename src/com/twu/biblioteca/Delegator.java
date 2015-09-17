@@ -83,4 +83,8 @@ public class Delegator {
             display.print("Select a valid option!");
         }
     }
+
+    public void adminOption() {
+        display.print("Choose Any One Option :");
+    }
 }

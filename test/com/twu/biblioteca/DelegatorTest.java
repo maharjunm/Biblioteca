@@ -44,6 +44,14 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldReturnTheChooseAnyOneOptionMessageWhenAdminLoggedIntoTheSystem() {
+
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+    }
+
+    @Test
     public void shouldExitTheApplicationWhenWeChoose5FromTheWhileLoop() {
 
         exit.expectSystemExit();
