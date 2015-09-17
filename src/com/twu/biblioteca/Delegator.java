@@ -126,6 +126,9 @@ public class Delegator {
             case "6":
                 display.print(library.checkedOutList());
                 break;
+            case "7":
+                display.print(user.toString());
+                break;
             case "8":
                 normalMenu = new GuestMenu();
                 start();
