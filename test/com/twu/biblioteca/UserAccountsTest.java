@@ -31,9 +31,17 @@ public class UserAccountsTest {
     }
 
     @Test
-    public void shouldReturnUserWhenPasswordAreMatched() {
+    public void shouldReturnUserWhenPasswordAreNotMatched() {
         UserAccounts userAccounts = new UserAccounts();
 
         assertEquals(userAccounts.user("B09-asd", "asdasd"), null);
+    }
+
+    @Test
+    public void shouldReturnUserWhenPasswordAreMatched() {
+        UserAccounts userAccounts = new UserAccounts();
+        User user = new User("B09-1893", "B091893", "Admin", "Maharjun", "maharjun123@gmail.com", "8498984842");
+
+        assertEquals(userAccounts.user("B09-1893", "B091893").toString(), user.toString());
     }
 }

@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class UserAccounts {
 
     private ArrayList users = new ArrayList<User>() {{
-        add(new User("B09-1893", "B091893", "Admin"));
-        add(new User("B09-1894", "B091894", "User"));
-        add(new User("B09-1895", "B091895", "User"));
+        add(new User("B09-1893", "B091893", "Admin", "Maharjun", "maharjun123@gmail.com", "8498984842"));
+        add(new User("B09-1894", "B091894", "User", "Maharjun", "maharjun123@gmail.com", "8498984842"));
+        add(new User("B09-1895", "B091895", "User", "Maharjun", "maharjun123@gmail.com", "8498984842"));
     }};
 
     public Menu compare(String loginId, String password) {
@@ -29,6 +29,11 @@ public class UserAccounts {
 
     public User user(String loginId, String password) {
         User user = null;
+        for (int i = 0; i < users.size(); i++) {
+            user = (User) users.get(i);
+            if(user.compare(loginId,password))
+                return user;
+        }
         return user;
     }
 }
