@@ -106,6 +106,9 @@ public class Delegator {
                 String thatBookName = userInput.getInput();
                 display.print(library.returnBook(thatBookName));
                 break;
+            case "6":
+                display.print(library.checkedOutList());
+                break;
 
         }
     }

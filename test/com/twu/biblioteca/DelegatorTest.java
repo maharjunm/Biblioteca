@@ -54,7 +54,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheListBooksWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheListBooksWhenAdminChooses1() {
 
         when(userInput.getInput()).thenReturn("1");
         delegator.adminOption();
@@ -64,7 +64,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheListMoviesWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheListMoviesWhenAdminChooses2() {
 
         when(userInput.getInput()).thenReturn("2");
         delegator.adminOption();
@@ -74,7 +74,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheCheckoutMessageWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheCheckoutMessageWhenAdminChoose3() {
 
         when(userInput.getInput()).thenReturn("3").thenReturn("PK");
         delegator.adminOption();
@@ -84,7 +84,7 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheCheckoutBookMessageWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheCheckoutBookMessageWhenAdminChooses4() {
 
         when(userInput.getInput()).thenReturn("4").thenReturn("Head First Java");
         delegator.adminOption();
@@ -94,13 +94,23 @@ public class DelegatorTest {
     }
 
     @Test
-    public void shouldPrintTheReturnBookMessageWhenAdminLoggedIntoTheSystem() {
+    public void shouldPrintTheReturnBookMessageWhenAdminChooses5() {
 
         when(userInput.getInput()).thenReturn("5").thenReturn("Head First Java");
         delegator.adminOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print(library.returnBook("Head First Java"));
+    }
+
+    @Test
+    public void shouldPrintTheCheckoutListWhenAdminChooses6() {
+
+        when(userInput.getInput()).thenReturn("6").thenReturn("Head First Java");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.checkedOutList());
     }
 
     @Test
