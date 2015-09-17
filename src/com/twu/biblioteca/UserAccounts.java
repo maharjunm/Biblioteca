@@ -26,4 +26,9 @@ public class UserAccounts {
         menu = new GuestMenu();
         return menu;
     }
+
+    public User user(String loginId, String password) {
+        User user = null;
+        return user;
+    }
 }

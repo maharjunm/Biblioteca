@@ -29,4 +29,11 @@ public class UserAccountsTest {
 
         assertEquals(userAccounts.compare("B09-1893", "B091893").toString(), menu.toString());
     }
+
+    @Test
+    public void shouldReturnUserWhenPasswordAreMatched() {
+        UserAccounts userAccounts = new UserAccounts();
+
+        assertEquals(userAccounts.user("B09-asd", "asdasd"), null);
+    }
 }
