@@ -91,10 +91,10 @@ public class Delegator {
                 String thatbookName = userInput.getInput();
                 display.print(library.returnBook(thatbookName));
                 break;
-            case "6":
+            case "7":
                 normalMenu = new GuestMenu();
                 start();
-            case "7":
+            case "8":
                 System.exit(0);
             default:
                 display.print("Select a valid option!");
