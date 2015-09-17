@@ -7,51 +7,58 @@ import static org.junit.Assert.*;
 public class UserMenuTest {
 
     @Test
-    public void shouldReturnTheListBooksOption(){
+    public void shouldReturnTheListBooksOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheListMoviesOption(){
+    public void shouldReturnTheListMoviesOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheCheckOutMovieOption(){
+    public void shouldReturnTheCheckOutMovieOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheCheckOutBookOption(){
+    public void shouldReturnTheCheckOutBookOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheReturnBookOption(){
+    public void shouldReturnTheReturnBookOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheLogoutOption(){
+    public void shouldReturnTheLogoutOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 
     @Test
-    public void shouldReturnTheQuitOption(){
+    public void shouldReturnTheQuitOption() {
         UserMenu userMenu = new UserMenu();
 
-        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Logout\n7.Quit",userMenu.toString());
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
+    }
+
+    @Test
+    public void shouldReturnTheDetailsOption() {
+        UserMenu userMenu = new UserMenu();
+
+        assertEquals("1.List Books\n2.List Movies\n3.Checkout Movie\n4.Checkout Book\n5.Return Book\n6.Details\n7.Logout\n8.Quit", userMenu.toString());
     }
 }
