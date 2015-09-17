@@ -46,6 +46,7 @@ public class DelegatorTest {
     @Test
     public void shouldAskTheInputFromTheAdminWhenAdminLoggedIntoTheSystem() {
 
+        when(userInput.getInput()).thenReturn("1");
         delegator.adminOption();
 
         verify(display, times(1)).print("Choose Any One Option :");
@@ -80,6 +81,16 @@ public class DelegatorTest {
 
         verify(display, times(1)).print("Choose Any One Option :");
         verify(display, times(1)).print(library.checkedOut("PK"));
+    }
+
+    @Test
+    public void shouldPrintTheCheckoutBookMessageWhenAdminLoggedIntoTheSystem() {
+
+        when(userInput.getInput()).thenReturn("4").thenReturn("Head First Java");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.checkedOut("Head First Java"));
     }
 
     @Test

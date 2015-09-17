@@ -98,6 +98,10 @@ public class Delegator {
                 String movieName = userInput.getInput();
                 display.print(library.checkedOutMovie(movieName));
                 break;
+            case "4":
+                String bookName = userInput.getInput();
+                display.print(library.checkedOut(bookName));
+                break;
         }
     }
 }
