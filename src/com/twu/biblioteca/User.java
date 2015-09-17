@@ -3,16 +3,18 @@ package com.twu.biblioteca;
 
 public class User {
 
+    private String email;
     private String name;
     private String password;
     private String loginId;
     private String role;
 
-    public User(String loginId, String password, String role, String name) {
+    public User(String loginId, String password, String role, String name, String email) {
         this.loginId = loginId;
         this.password = password;
         this.role = role;
         this.name = name;
+        this.email = email;
     }
 
     public boolean compare(String loginId, String password) {
@@ -27,6 +29,6 @@ public class User {
 
     @Override
     public String toString(){
-        return name;
+        return name + "\t" + email;
     }
 }
