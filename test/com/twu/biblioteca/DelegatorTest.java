@@ -33,6 +33,20 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldExitFromTheApplicationWhenWeChoose6FromTheWhileLoopWhenUserLoggedIntoTheSystem() {
+        exit.expectSystemExit();
+        Menu menu = new UserMenu();
+
+        when(userInput.getInput()).thenReturn("B09-1894").thenReturn("B091894").thenReturn("8");
+        when(userAccounts.compare("B09-1894", "B091894")).thenReturn(menu);
+
+        delegator.userOption();
+
+        verify(display, times(1)).print(menu.toString());
+
+    }
+
+    @Test
     public void shouldRestartTheApplicationWhenWeChoose6FromTheWhileLoopWhenAdminLoggedIntoTheSystem() {
         exit.expectSystemExit();
         Menu menu = new AdminMenu();
