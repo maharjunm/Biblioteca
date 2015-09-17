@@ -6,8 +6,8 @@ public class UserAccounts {
 
     private ArrayList users = new ArrayList<User>() {{
         add(new User("B09-1893", "B091893", "Admin", "Maharjun", "maharjun123@gmail.com", "8498984842"));
-        add(new User("B09-1894", "B091894", "User", "Maharjun", "maharjun123@gmail.com", "8498984842"));
-        add(new User("B09-1895", "B091895", "User", "Maharjun", "maharjun123@gmail.com", "8498984842"));
+        add(new User("B09-1894", "B091894", "User", "Maharjun1", "maharjun123@gmail.com", "8498984842"));
+        add(new User("B09-1895", "B091895", "User", "Maharjun2", "maharjun123@gmail.com", "8498984842"));
     }};
 
     public Menu compare(String loginId, String password) {
