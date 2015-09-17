@@ -91,6 +91,9 @@ public class Delegator {
                 String thatbookName = userInput.getInput();
                 display.print(library.returnBook(thatbookName));
                 break;
+            case "6":
+                display.print(user.toString());
+                break;
             case "7":
                 normalMenu = new GuestMenu();
                 start();

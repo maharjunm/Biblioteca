@@ -47,6 +47,21 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheUserDetailsWhenHeChooses8() {
+        exit.expectSystemExit();
+        Menu menu = new UserMenu();
+        User user = new User("B09-1894", "B091894", "User", "Maharjun", "maharjun123@gmail.com", "8498984842");
+
+        when(userInput.getInput()).thenReturn("B09-1894").thenReturn("B091894").thenReturn("6").thenReturn("8");
+        when(userAccounts.compare("B09-1894", "B091894")).thenReturn(menu);
+        when(userAccounts.user("B09-1894", "B091894")).thenReturn(user);
+        delegator.userOption();
+
+        verify(display, times(1)).print(user.toString());
+
+    }
+
+    @Test
     public void shouldRestartTheApplicationWhenWeChoose6FromTheWhileLoopWhenAdminLoggedIntoTheSystem() {
         exit.expectSystemExit();
         Menu menu = new AdminMenu();
@@ -73,7 +88,6 @@ public class DelegatorTest {
         verify(display, times(1)).print(menu.toString());
 
     }
-
 
     @Test
     public void shouldPrintTheAdminDetailsWhenHeChooses8() {
