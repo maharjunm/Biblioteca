@@ -26,19 +26,25 @@ public class Delegator {
         display.print(normalMenu.toString());
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        if (input.equals("1")) {
-            display.print(library.toString());
-        } else if (input.equals("2")) {
-            display.print(library.listMovies());
-        } else if (input.equals("3")) {
-            String movieName = userInput.getInput();
-            display.print(library.checkedOutMovie(movieName));
-        } else if (input.equals("4")) {
-            userOption();
-        } else if (input.equals("5")) {
-            System.exit(0);
-        } else {
-            display.print("Select a valid option!");
+        switch (input) {
+            case "1":
+                display.print(library.toString());
+                break;
+            case "2":
+                display.print(library.listMovies());
+                break;
+            case "3":
+                String movieName = userInput.getInput();
+                display.print(library.checkedOutMovie(movieName));
+                break;
+            case "4":
+                userOption();
+                break;
+            case "5":
+                System.exit(0);
+            default:
+                display.print("Select a valid option!");
+                break;
         }
     }
 
@@ -64,26 +70,32 @@ public class Delegator {
     private void processUserOption() {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
-        if (input.equals("1")) {
-            display.print(library.toString());
-        } else if (input.equals("2")) {
-            display.print(library.listMovies());
-        } else if (input.equals("3")) {
-            String movieName = userInput.getInput();
-            display.print(library.checkedOutMovie(movieName));
-        } else if (input.equals("4")) {
-            String bookName = userInput.getInput();
-            display.print(library.checkedOut(bookName));
-        } else if (input.equals("5")) {
-            String bookName = userInput.getInput();
-            display.print(library.returnBook(bookName));
-        } else if (input.equals("6")) {
-            normalMenu = new GuestMenu();
-            start();
-        } else if (input.equals("7")) {
-            System.exit(0);
-        } else {
-            display.print("Select a valid option!");
+        switch (input) {
+            case "1":
+                display.print(library.toString());
+                break;
+            case "2":
+                display.print(library.listMovies());
+                break;
+            case "3":
+                String movieName = userInput.getInput();
+                display.print(library.checkedOutMovie(movieName));
+                break;
+            case "4":
+                String bookName = userInput.getInput();
+                display.print(library.checkedOut(bookName));
+                break;
+            case "5":
+                String thatbookName = userInput.getInput();
+                display.print(library.returnBook(thatbookName));
+                break;
+            case "6":
+                normalMenu = new GuestMenu();
+                start();
+            case "7":
+                System.exit(0);
+            default:
+                display.print("Select a valid option!");
         }
     }
 
