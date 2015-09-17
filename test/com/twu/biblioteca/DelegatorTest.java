@@ -53,6 +53,16 @@ public class DelegatorTest {
     }
 
     @Test
+    public void shouldPrintTheListWhenAdminLoggedIntoTheSystem() {
+
+        when(userInput.getInput()).thenReturn("1");
+        delegator.adminOption();
+
+        verify(display, times(1)).print("Choose Any One Option :");
+        verify(display, times(1)).print(library.toString());
+    }
+
+    @Test
     public void shouldExitTheApplicationWhenWeChoose5FromTheWhileLoop() {
 
         exit.expectSystemExit();
