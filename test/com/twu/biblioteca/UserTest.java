@@ -54,4 +54,11 @@ public class UserTest {
 
         assertEquals("Maharjun\tmaharjun123@gmail.com\t8498984842", user.toString());
     }
+
+    @Test
+    public void shouldReturnFalseWhenWeCompareWithNull() {
+        User user = new User("B09-1893", "B091893", "Librarian", "Maharjun", "maharjun123@gmail.com", "8498984842");
+
+        assertFalse(user.equals(null));
+    }
 }
