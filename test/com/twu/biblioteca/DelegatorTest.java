@@ -36,7 +36,7 @@ public class DelegatorTest {
         exit.expectSystemExit();
         Menu menu = new AdminMenu();
 
-        when(userInput.getInput()).thenReturn("B09-1893").thenReturn("B091893").thenReturn("7").thenReturn("5");
+        when(userInput.getInput()).thenReturn("B09-1893").thenReturn("B091893").thenReturn("8").thenReturn("5");
         when(userAccounts.compare("B09-1893", "B091893")).thenReturn(menu);
 
         delegator.userOption();

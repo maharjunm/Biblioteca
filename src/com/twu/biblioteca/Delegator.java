@@ -126,10 +126,10 @@ public class Delegator {
             case "6":
                 display.print(library.checkedOutList());
                 break;
-            case "7":
+            case "8":
                 normalMenu = new GuestMenu();
                 start();
-            case "8":
+            case "9":
                 System.exit(0);
             default:
                 display.print("Select a valid option!");
