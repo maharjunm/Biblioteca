@@ -53,21 +53,23 @@ public class Delegator {
         String password = userInput.getInput();
         normalMenu = userAccount.compare(loginId, password);
         if (normalMenu instanceof UserMenu) {
+            User user = userAccount.user(loginId,password);
             while (true) {
                 display.print(normalMenu.toString());
-                processUserOption();
+                processUserOption(user);
             }
         } else if (normalMenu instanceof AdminMenu) {
+            User user = userAccount.user(loginId,password);
             while (true) {
                 display.print(normalMenu.toString());
-                adminOption();
+                adminOption(user);
             }
         } else {
             display.print("Invalid User Name or Password!");
         }
     }
 
-    private void processUserOption() {
+    private void processUserOption(User user) {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
         switch (input) {
@@ -83,7 +85,7 @@ public class Delegator {
                 break;
             case "4":
                 String bookName = userInput.getInput();
-                display.print(library.checkedOut(bookName));
+                display.print(library.checkedOut(bookName, user));
                 break;
             case "5":
                 String thatbookName = userInput.getInput();
@@ -99,7 +101,7 @@ public class Delegator {
         }
     }
 
-    public void adminOption() {
+    public void adminOption(User user) {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
         switch (input) {
@@ -115,7 +117,7 @@ public class Delegator {
                 break;
             case "4":
                 String bookName = userInput.getInput();
-                display.print(library.checkedOut(bookName));
+                display.print(library.checkedOut(bookName, user));
                 break;
             case "5":
                 String thatBookName = userInput.getInput();
