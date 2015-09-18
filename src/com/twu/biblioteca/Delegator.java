@@ -62,7 +62,7 @@ public class Delegator {
             User user = userAccount.user(loginId,password);
             while (true) {
                 display.print(normalMenu.toString());
-                adminOption(user);
+                processAdminOption(user);
             }
         } else {
             display.print("Invalid User Name or Password!");
@@ -104,7 +104,7 @@ public class Delegator {
         }
     }
 
-    public void adminOption(User user) {
+    public void processAdminOption(User user) {
         display.print("Choose Any One Option :");
         String input = userInput.getInput();
         switch (input) {
