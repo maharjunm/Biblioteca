@@ -45,7 +45,8 @@ public class Delegator {
             case "5":
                 System.exit(0);
             default:
-                display.print("Select a valid option!");
+                InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
+                invalidMenuItem.execute();
                 break;
         }
     }
@@ -104,7 +105,8 @@ public class Delegator {
             case "8":
                 System.exit(0);
             default:
-                display.print("Select a valid option!");
+                InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
+                invalidMenuItem.execute();
         }
     }
 
@@ -144,7 +146,8 @@ public class Delegator {
             case "9":
                 System.exit(0);
             default:
-                display.print("Select a valid option!");
+                InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
+                invalidMenuItem.execute();
 
         }
     }
