@@ -2,10 +2,12 @@ package com.twu.biblioteca;
 
 public class CheckOutMovieMenuItem {
 
-    private final UserInput userInput;
+    private UserInput userInput;
+    private Library library;
 
-    public CheckOutMovieMenuItem(UserInput userInput) {
+    public CheckOutMovieMenuItem(UserInput userInput, Library library) {
         this.userInput = userInput;
+        this.library = library;
     }
 
     public String option() {
@@ -14,5 +16,6 @@ public class CheckOutMovieMenuItem {
 
     public void execute() {
         String movieName = userInput.getInput();
+        library.checkedOutMovie(movieName);
     }
 }
