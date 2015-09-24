@@ -2,10 +2,12 @@ package com.twu.biblioteca;
 
 public class ListMoviesMenuItem {
 
+    private Display display;
     private Library library;
 
-    public ListMoviesMenuItem(Library library) {
+    public ListMoviesMenuItem(Library library, Display display) {
         this.library = library;
+        this.display = display;
     }
 
     public String option() {
@@ -13,6 +15,6 @@ public class ListMoviesMenuItem {
     }
 
     public void execute() {
-        library.listMovies();
+        display.print(library.listMovies());
     }
 }
