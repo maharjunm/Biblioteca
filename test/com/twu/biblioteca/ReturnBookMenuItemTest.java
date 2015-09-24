@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,7 +12,8 @@ public class ReturnBookMenuItemTest {
     @Test
     public void shouldReturnTheOption() {
         UserInput userInput = mock(UserInput.class);
-        ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput);
+        Library library = mock(Library.class);
+        ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput, library);
 
         assertEquals("Return Book", returnBookMenuItem.option());
     }
@@ -21,10 +21,22 @@ public class ReturnBookMenuItemTest {
     @Test
     public void shouldTakeTheInputFromTheUser() {
         UserInput userInput = mock(UserInput.class);
-        ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput);
+        Library library = mock(Library.class);
+        ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput, library);
 
         returnBookMenuItem.execute();
 
         verify(userInput, times(1)).getInput();
+    }
+
+    @Test
+    public void shouldReturnTheReturnBookMessage() {
+        UserInput userInput = mock(UserInput.class);
+        Library library = mock(Library.class);
+        ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput,library);
+
+        returnBookMenuItem.execute();
+
+        verify(library, times(1)).returnBook(userInput.getInput());
     }
 }
