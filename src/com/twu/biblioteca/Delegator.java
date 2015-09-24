@@ -28,11 +28,12 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                ListBooksMenuItem menuItem  = new ListBooksMenuItem(library, display);
+                ListBooksMenuItem menuItem = new ListBooksMenuItem(library, display);
                 menuItem.execute();
                 break;
             case "2":
-                display.print(library.listMovies());
+                ListMoviesMenuItem listMoviesMenuItem = new ListMoviesMenuItem(library, display);
+                listMoviesMenuItem.execute();
                 break;
             case "3":
                 String movieName = userInput.getInput();
@@ -54,13 +55,13 @@ public class Delegator {
         String password = userInput.getInput();
         normalMenu = userAccount.compare(loginId, password);
         if (normalMenu instanceof UserMenu) {
-            User user = userAccount.user(loginId,password);
+            User user = userAccount.user(loginId, password);
             while (true) {
                 display.print(normalMenu.toString());
                 processUserOption(user);
             }
         } else if (normalMenu instanceof AdminMenu) {
-            User user = userAccount.user(loginId,password);
+            User user = userAccount.user(loginId, password);
             while (true) {
                 display.print(normalMenu.toString());
                 processAdminOption(user);
@@ -75,10 +76,12 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                display.print(library.listBooks());
+                ListBooksMenuItem menuItem = new ListBooksMenuItem(library, display);
+                menuItem.execute();
                 break;
             case "2":
-                display.print(library.listMovies());
+                ListMoviesMenuItem listMoviesMenuItem = new ListMoviesMenuItem(library, display);
+                listMoviesMenuItem.execute();
                 break;
             case "3":
                 String movieName = userInput.getInput();
@@ -110,10 +113,12 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                display.print(library.listBooks());
+                ListBooksMenuItem menuItem = new ListBooksMenuItem(library, display);
+                menuItem.execute();
                 break;
             case "2":
-                display.print(library.listMovies());
+                ListMoviesMenuItem listMoviesMenuItem = new ListMoviesMenuItem(library, display);
+                listMoviesMenuItem.execute();
                 break;
             case "3":
                 String movieName = userInput.getInput();
