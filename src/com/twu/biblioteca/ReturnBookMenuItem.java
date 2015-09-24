@@ -3,12 +3,14 @@ package com.twu.biblioteca;
 
 public class ReturnBookMenuItem {
 
+    private Display display;
     private Library library;
     private UserInput userInput;
 
-    public ReturnBookMenuItem(UserInput userInput, Library library) {
+    public ReturnBookMenuItem(UserInput userInput, Library library, Display display) {
         this.userInput = userInput;
         this.library = library;
+        this.display = display;
     }
 
     public String option() {
@@ -17,6 +19,6 @@ public class ReturnBookMenuItem {
 
     public void execute() {
         String bookName = userInput.getInput();
-        library.returnBook(bookName);
+        display.print(library.returnBook(bookName));
     }
 }
