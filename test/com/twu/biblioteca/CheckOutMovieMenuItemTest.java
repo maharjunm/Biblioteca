@@ -11,7 +11,8 @@ public class CheckOutMovieMenuItemTest {
     public void shouldRetutnTheOption() {
         UserInput userInput = mock(UserInput.class);
         Library library = mock(Library.class);
-        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library);
+        Display display = mock(Display.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library, display);
 
         assertEquals("Checkout Movie", menuItem.option());
     }
@@ -20,7 +21,8 @@ public class CheckOutMovieMenuItemTest {
     public void shouldTakeTheInputFromTheUser() {
         UserInput userInput = mock(UserInput.class);
         Library library = mock(Library.class);
-        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library);
+        Display display = mock(Display.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library, display);
 
         menuItem.execute();
 
@@ -31,11 +33,25 @@ public class CheckOutMovieMenuItemTest {
     public void shouldReturnTheCheckoutMovieMessage() {
         UserInput userInput = mock(UserInput.class);
         Library library = mock(Library.class);
-        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput,library);
+        Display display = mock(Display.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library, display);
 
         when(userInput.getInput()).thenReturn("Arjun");
         menuItem.execute();
 
         verify(library, times(1)).checkedOutMovie(userInput.getInput());
+    }
+
+    @Test
+    public void shouldPrintTheCheckoutMovieMessage() {
+        UserInput userInput = mock(UserInput.class);
+        Library library = mock(Library.class);
+        Display display = mock(Display.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput, library, display);
+
+        when(userInput.getInput()).thenReturn("Arjun");
+        menuItem.execute();
+
+        verify(display, times(1)).print(library.checkedOutMovie(userInput.getInput()));
     }
 }
