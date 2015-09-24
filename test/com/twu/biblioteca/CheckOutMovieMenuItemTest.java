@@ -3,12 +3,28 @@ package com.twu.biblioteca;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
 public class CheckOutMovieMenuItemTest {
 
     @Test
     public void shouldRetutnTheOption() {
-        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem();
+        UserInput userInput = mock(UserInput.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput);
 
-        Assert.assertEquals("Checkout Movie", menuItem.option());
+        assertEquals("Checkout Movie", menuItem.option());
+    }
+
+    @Test
+    public void shouldTakeTheInputFromTheUser() {
+        UserInput userInput = mock(UserInput.class);
+        CheckOutMovieMenuItem menuItem = new CheckOutMovieMenuItem(userInput);
+
+        menuItem.execute();
+
+        verify(userInput, times(1)).getInput();
     }
 }
