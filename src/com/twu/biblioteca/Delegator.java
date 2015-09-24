@@ -43,7 +43,8 @@ public class Delegator {
                 userOption();
                 break;
             case "5":
-                System.exit(0);
+                QuitMenuItem quitMenuItem = new QuitMenuItem();
+                quitMenuItem.execute();
             default:
                 InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
                 invalidMenuItem.execute();
@@ -103,7 +104,8 @@ public class Delegator {
                 normalMenu = new GuestMenu();
                 start();
             case "8":
-                System.exit(0);
+                QuitMenuItem quitMenuItem = new QuitMenuItem();
+                quitMenuItem.execute();
             default:
                 InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
                 invalidMenuItem.execute();
@@ -144,7 +146,8 @@ public class Delegator {
                 normalMenu = new GuestMenu();
                 start();
             case "9":
-                System.exit(0);
+                QuitMenuItem quitMenuItem = new QuitMenuItem();
+                quitMenuItem.execute();
             default:
                 InvalidMenuItem invalidMenuItem = new InvalidMenuItem(display);
                 invalidMenuItem.execute();
