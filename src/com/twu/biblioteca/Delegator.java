@@ -92,8 +92,8 @@ public class Delegator {
                 display.print(library.checkedOut(bookName, user));
                 break;
             case "5":
-                String thatbookName = userInput.getInput();
-                display.print(library.returnBook(thatbookName));
+                ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput, library, display);
+                returnBookMenuItem.execute();
                 break;
             case "6":
                 display.print(user.toString());
@@ -129,8 +129,8 @@ public class Delegator {
                 display.print(library.checkedOut(bookName, user));
                 break;
             case "5":
-                String thatBookName = userInput.getInput();
-                display.print(library.returnBook(thatBookName));
+                ReturnBookMenuItem returnBookMenuItem = new ReturnBookMenuItem(userInput, library, display);
+                returnBookMenuItem.execute();
                 break;
             case "6":
                 display.print(library.checkedOutList());
