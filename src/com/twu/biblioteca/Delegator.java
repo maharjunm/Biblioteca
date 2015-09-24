@@ -28,7 +28,8 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                display.print(library.toString());
+                ListBooksMenuItem menuItem  = new ListBooksMenuItem(library, display);
+                menuItem.execute();
                 break;
             case "2":
                 display.print(library.listMovies());
@@ -74,7 +75,7 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                display.print(library.toString());
+                display.print(library.listBooks());
                 break;
             case "2":
                 display.print(library.listMovies());
@@ -109,7 +110,7 @@ public class Delegator {
         String input = userInput.getInput();
         switch (input) {
             case "1":
-                display.print(library.toString());
+                display.print(library.listBooks());
                 break;
             case "2":
                 display.print(library.listMovies());
