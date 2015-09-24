@@ -1,4 +1,4 @@
-//Movie has Name
+//Movie has Name , Director , year Released and Rating
 package com.twu.biblioteca;
 
 public class Movie {

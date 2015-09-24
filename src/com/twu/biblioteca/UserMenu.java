@@ -1,3 +1,4 @@
+//UserMenu has User options and it will return the options.
 package com.twu.biblioteca;
 
 public class UserMenu implements Menu {

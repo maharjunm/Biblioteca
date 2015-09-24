@@ -1,3 +1,4 @@
+//Admin menu has admin options and it will return the options
 package com.twu.biblioteca;
 
 public class AdminMenu implements Menu {

@@ -1,4 +1,4 @@
-//User has name
+//User has name , phone number , email, loginId, password and role
 package com.twu.biblioteca;
 
 public class User {
