@@ -36,8 +36,8 @@ public class Delegator {
                 listMoviesMenuItem.execute();
                 break;
             case "3":
-                String movieName = userInput.getInput();
-                display.print(library.checkedOutMovie(movieName));
+                CheckOutMovieMenuItem checkOutMovieMenuItem = new CheckOutMovieMenuItem(userInput, library, display);
+                checkOutMovieMenuItem.execute();
                 break;
             case "4":
                 userOption();
@@ -84,8 +84,8 @@ public class Delegator {
                 listMoviesMenuItem.execute();
                 break;
             case "3":
-                String movieName = userInput.getInput();
-                display.print(library.checkedOutMovie(movieName));
+                CheckOutMovieMenuItem checkOutMovieMenuItem = new CheckOutMovieMenuItem(userInput, library, display);
+                checkOutMovieMenuItem.execute();
                 break;
             case "4":
                 String bookName = userInput.getInput();
@@ -121,8 +121,8 @@ public class Delegator {
                 listMoviesMenuItem.execute();
                 break;
             case "3":
-                String movieName = userInput.getInput();
-                display.print(library.checkedOutMovie(movieName));
+                CheckOutMovieMenuItem checkOutMovieMenuItem = new CheckOutMovieMenuItem(userInput, library, display);
+                checkOutMovieMenuItem.execute();
                 break;
             case "4":
                 String bookName = userInput.getInput();
